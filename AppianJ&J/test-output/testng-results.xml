@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="5" total="10" passed="5">
+  <reporter-output>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[C:\Users\satheeshnair\AppianJ&J\ExecutionReports\AutomationTestReport.html]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="108959" started-at="2019-01-30T08:35:53Z" finished-at="2019-01-30T08:37:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="108959" started-at="2019-01-30T08:35:53Z" finished-at="2019-01-30T08:37:42Z">
+      <class name="jj.test.TC_AddNewPositionandResource">
+        <test-method status="PASS" signature="setup()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="setup" is-config="true" duration-ms="3893" started-at="2019-01-30T08:35:49Z" finished-at="2019-01-30T08:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testcase()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="testcase" duration-ms="8918" started-at="2019-01-30T08:35:53Z" finished-at="2019-01-30T08:36:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+            <line>
+              <![CDATA[C:\Users\satheeshnair\AppianJ&J\ExecutionReports\AutomationTestReport.html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testcase -->
+        <test-method status="PASS" signature="header()[pri:1, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="header" duration-ms="3653" started-at="2019-01-30T08:36:02Z" finished-at="2019-01-30T08:36:06Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- header -->
+        <test-method status="PASS" signature="clickondemand()[pri:2, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="clickondemand" duration-ms="2677" started-at="2019-01-30T08:36:06Z" finished-at="2019-01-30T08:36:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickondemand -->
+        <test-method status="PASS" signature="addnewposition()[pri:3, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="addnewposition" duration-ms="9741" started-at="2019-01-30T08:36:08Z" finished-at="2019-01-30T08:36:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addnewposition -->
+        <test-method status="PASS" signature="addposition()[pri:4, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="addposition" duration-ms="83928" started-at="2019-01-30T08:36:18Z" finished-at="2019-01-30T08:37:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addposition -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="tearDown" is-config="true" duration-ms="595" started-at="2019-01-30T08:37:42Z" finished-at="2019-01-30T08:37:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- jj.test.TC_AddNewPositionandResource -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
