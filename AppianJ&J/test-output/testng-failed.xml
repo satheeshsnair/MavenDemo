@@ -5,8 +5,13 @@
     <classes>
       <class name="jj.test.TC_AddNewPositionandResource">
         <methods>
+          <include name="logout"/>
+          <include name="addnewposition"/>
+          <include name="clickondemand"/>
           <include name="addposition"/>
           <include name="tearDown"/>
+          <include name="header"/>
+          <include name="submitposition"/>
           <include name="setup"/>
         </methods>
       </class> <!-- jj.test.TC_AddNewPositionandResource -->

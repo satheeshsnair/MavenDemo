@@ -41,5 +41,4 @@ public class AddNewPosition {
 		Thread.sleep(10000);
 	}
 	
-
 }

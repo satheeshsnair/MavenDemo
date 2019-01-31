@@ -39,7 +39,7 @@ public class Login extends Utilities {
 	
 	public void username(int sheetnum, int row, int column) throws Exception
 	{
-		utilites = new Utilites(driver);
+		utilites = new Utilites(driver, test);
 		utilites.readexcel(sheetnum,row,column);
 		driver.findElement(username1).sendKeys(utilites.uname);
 		test.pass("Entered username: " + utilites.uname);
@@ -47,7 +47,7 @@ public class Login extends Utilities {
 	
 	public  void password(int sheetnum, int row, int column) throws Exception
 	{
-		utilites = new Utilites(driver);
+		utilites = new Utilites(driver, test);
 		utilites.readexcel(sheetnum,row,column);
 		driver.findElement(password).sendKeys(utilites.pwd);
 		test.pass("Entered password: " + utilites.pwd);

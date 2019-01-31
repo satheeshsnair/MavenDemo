@@ -10,17 +10,26 @@
     <line>
       <![CDATA[Exception in ExtentManager function]]>
     </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108959" started-at="2019-01-30T08:35:53Z" finished-at="2019-01-30T08:37:42Z">
+  <suite name="Default suite" duration-ms="206648" started-at="2019-01-31T12:00:06Z" finished-at="2019-01-31T12:03:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="108959" started-at="2019-01-30T08:35:53Z" finished-at="2019-01-30T08:37:42Z">
+    <test name="Default test" duration-ms="206648" started-at="2019-01-31T12:00:06Z" finished-at="2019-01-31T12:03:33Z">
       <class name="jj.test.TC_AddNewPositionandResource">
-        <test-method status="PASS" signature="setup()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="setup" is-config="true" duration-ms="3893" started-at="2019-01-30T08:35:49Z" finished-at="2019-01-30T08:35:53Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="setup" is-config="true" duration-ms="3849" started-at="2019-01-31T12:00:02Z" finished-at="2019-01-31T12:00:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testcase()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="testcase" duration-ms="8918" started-at="2019-01-30T08:35:53Z" finished-at="2019-01-30T08:36:02Z">
+        <test-method status="PASS" signature="testcase()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="testcase" duration-ms="8306" started-at="2019-01-31T12:00:06Z" finished-at="2019-01-31T12:00:14Z">
           <reporter-output>
             <line>
               <![CDATA[Exception in ExtentManager function]]>
@@ -30,26 +39,35 @@
             </line>
           </reporter-output>
         </test-method> <!-- testcase -->
-        <test-method status="PASS" signature="header()[pri:1, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="header" duration-ms="3653" started-at="2019-01-30T08:36:02Z" finished-at="2019-01-30T08:36:06Z">
+        <test-method status="PASS" signature="header()[pri:1, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="header" duration-ms="3721" started-at="2019-01-31T12:00:14Z" finished-at="2019-01-31T12:00:18Z">
           <reporter-output>
             <line>
               <![CDATA[Exception in ExtentManager function]]>
             </line>
           </reporter-output>
         </test-method> <!-- header -->
-        <test-method status="PASS" signature="clickondemand()[pri:2, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="clickondemand" duration-ms="2677" started-at="2019-01-30T08:36:06Z" finished-at="2019-01-30T08:36:08Z">
+        <test-method status="PASS" signature="clickondemand()[pri:2, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="clickondemand" duration-ms="2709" started-at="2019-01-31T12:00:18Z" finished-at="2019-01-31T12:00:21Z">
           <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
           </reporter-output>
         </test-method> <!-- clickondemand -->
-        <test-method status="PASS" signature="addnewposition()[pri:3, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="addnewposition" duration-ms="9741" started-at="2019-01-30T08:36:08Z" finished-at="2019-01-30T08:36:18Z">
+        <test-method status="PASS" signature="addnewposition()[pri:3, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="addnewposition" duration-ms="9785" started-at="2019-01-31T12:00:21Z" finished-at="2019-01-31T12:00:31Z">
           <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
           </reporter-output>
         </test-method> <!-- addnewposition -->
-        <test-method status="PASS" signature="addposition()[pri:4, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="addposition" duration-ms="83928" started-at="2019-01-30T08:36:18Z" finished-at="2019-01-30T08:37:42Z">
+        <test-method status="PASS" signature="addposition()[pri:4, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="addposition" duration-ms="182112" started-at="2019-01-31T12:00:31Z" finished-at="2019-01-31T12:03:33Z">
           <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
           </reporter-output>
         </test-method> <!-- addposition -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="tearDown" is-config="true" duration-ms="595" started-at="2019-01-30T08:37:42Z" finished-at="2019-01-30T08:37:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:jj.test.TC_AddNewPositionandResource@e25b2fe]" name="tearDown" is-config="true" duration-ms="368" started-at="2019-01-31T12:03:33Z" finished-at="2019-01-31T12:03:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -1,17 +1,19 @@
 package jj.pages;
 
-import javax.swing.text.Utilities;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import utilities.Utilites;
+
 
 
 public class Headers
 {
 	public WebDriver driver;
-	Utilites utils = new Utilites(driver);
+	private ExtentTest  test;
+	Utilites utils = new Utilites(driver, test);
 	
 	/*************Header Locator**************/
 	public By Actiontab = By.xpath("(//*[@class='appian-menu-item'])[4]");
@@ -32,6 +34,7 @@ public class Headers
 	public Headers(WebDriver driver)
 	{
 		this.driver=driver;
+		//this.test = test;
 	}
 }	
 	
