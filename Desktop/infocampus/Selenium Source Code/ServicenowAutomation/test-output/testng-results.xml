@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[C:\Users\jayeshgurjar\Documents\Workspace\ServicenowAutomation\target\ExtentReports\Week49\04122018_150846_AutomationTestReport.html]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[Exception in ExtentManager function]]>
+    </line>
+    <line>
+      <![CDATA[ - PASSED.]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="174839" started-at="2018-12-04T09:38:46Z" finished-at="2018-12-04T09:41:41Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="174839" started-at="2018-12-04T09:38:46Z" finished-at="2018-12-04T09:41:41Z">
+      <class name="ServicenowDemo.CreateProblemFromIncident">
+        <test-method status="PASS" signature="CreateErrorRepFolder()[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="CreateErrorRepFolder" is-config="true" duration-ms="14" started-at="2018-12-04T09:38:46Z" finished-at="2018-12-04T09:38:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateErrorRepFolder -->
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="browserSetup" is-config="true" duration-ms="11318" started-at="2018-12-04T09:38:46Z" finished-at="2018-12-04T09:38:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="createExtentInstance()[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="createExtentInstance" is-config="true" duration-ms="201" started-at="2018-12-04T09:38:57Z" finished-at="2018-12-04T09:38:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+            <line>
+              <![CDATA[C:\Users\jayeshgurjar\Documents\Workspace\ServicenowAutomation\target\ExtentReports\Week49\04122018_150846_AutomationTestReport.html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createExtentInstance -->
+        <test-method status="PASS" signature="testIncidentCreation()[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="testIncidentCreation" duration-ms="162810" started-at="2018-12-04T09:38:57Z" finished-at="2018-12-04T09:41:40Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+            <line>
+              <![CDATA[Exception in ExtentManager function]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testIncidentCreation -->
+        <test-method status="PASS" signature="operationsOnTestCompletion(org.testng.ITestResult)[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="operationsOnTestCompletion" is-config="true" duration-ms="1" started-at="2018-12-04T09:41:40Z" finished-at="2018-12-04T09:41:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testIncidentCreation status=SUCCESS method=CreateProblemFromIncident.testIncidentCreation()[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982] output=Exception in ExtentManager function]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[ - PASSED.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- operationsOnTestCompletion -->
+        <test-method status="PASS" signature="tearDownFunction()[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="tearDownFunction" is-config="true" duration-ms="428" started-at="2018-12-04T09:41:40Z" finished-at="2018-12-04T09:41:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownFunction -->
+        <test-method status="PASS" signature="closeSession()[pri:0, instance:ServicenowDemo.CreateProblemFromIncident@1e127982]" name="closeSession" is-config="true" duration-ms="58" started-at="2018-12-04T09:41:41Z" finished-at="2018-12-04T09:41:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+      </class> <!-- ServicenowDemo.CreateProblemFromIncident -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

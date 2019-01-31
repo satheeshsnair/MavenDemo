@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ServicenowSuite]">
+  <test thread-count="5" name="CreationOfServiceRequest(failed)">
+    <classes>
+      <class name="ServicenowDemo.CreateServiceRequest">
+        <methods>
+          <include name="browserSetup"/>
+          <include name="operationsOnTestCompletion"/>
+          <include name="createExtentInstance"/>
+          <include name="testServiceRequestCreation"/>
+          <include name="CreateErrorRepFolder"/>
+          <include name="closeSession"/>
+          <include name="tearDownFunction"/>
+        </methods>
+      </class> <!-- ServicenowDemo.CreateServiceRequest -->
+    </classes>
+  </test> <!-- CreationOfServiceRequest(failed) -->
+</suite> <!-- Failed suite [ServicenowSuite] -->

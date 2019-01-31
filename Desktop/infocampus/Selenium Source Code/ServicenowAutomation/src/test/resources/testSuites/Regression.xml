@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ServicenowSuite">
+  <test name="CreationOfIncident">
+    <classes>
+      <class name="ServicenowDemo.CreateIncidentTest"/>
+    </classes>
+  </test>
+  <test name="CreationOfServiceRequest">
+    <classes>
+      <class name="ServicenowDemo.CreateServiceRequest"/>
+    </classes>
+  </test>
+  <test name="CreationOfChangeRequest">
+    <classes>
+      <class name="ServicenowDemo.CreateChangeRequest"/>
+    </classes>
+  </test>
+  <test name="CreationOfKnowledgeArticle">
+    <classes>
+      <class name="ServicenowDemo.CreateKnowledgeArticle"/>
+    </classes>
+  </test>
+</suite> 
