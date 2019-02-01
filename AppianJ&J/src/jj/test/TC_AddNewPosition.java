@@ -8,7 +8,7 @@ import jj.pages.Login;
 import utilities.SharedFunctions;
 import utilities.Utilites;
 
-public class TC_AddNewPositionandResource extends TestBase 
+public class TC_AddNewPosition extends TestBase 
 {
 	Login login; //Initialize class
 	Headers headers;
@@ -94,7 +94,6 @@ public class TC_AddNewPositionandResource extends TestBase
 		initializeReport();
 		headers = new Headers(driver);
 		utilities = new Utilites(driver,test);
-		//String acceptbtn = driver.findElement(headers.acceptbtn).getText();
 		if(sharefunctions.isXpathExists(headers.acceptbtn))
 		{
 			sharefunctions.click(headers.acceptbtn);
@@ -154,85 +153,22 @@ public class TC_AddNewPositionandResource extends TestBase
 			test.pass("Entered all data successfully!!!");
 		}
 	}
-	@Test(enabled=false,priority = 5)
+	@Test(enabled=true,priority = 5)
 	public void submitposition() throws InterruptedException
 	{
 		sharefunctions.click(newposition.save_complete_submit);
+		if(sharefunctions.isXpathExists(newposition.submit_form_yes))
+		{
+			sharefunctions.click(newposition.submit_form_yes);
+		}
 		test.pass("Posiiton submiited");
 	}
-	@Test(enabled=false,priority = 6)
+	@Test(enabled=true,priority = 6)
 	public void logout() throws InterruptedException
 	{
 		sharefunctions.click(headers.logo);
+		Thread.sleep(2000);
 		sharefunctions.click(headers.logout);
-		test.pass("Posiiton submiited");
-	}
-	@Test(enabled=false,priority = 7)
-	public void loginasvendor() throws Exception
-	{
-		Thread.sleep(4000);
-		login = new Login(driver,test); //initialize objectl
-		login.username(0,1,0); //sheet num, row , column
-		login.password(0,1,1); //sheet num, row , column
-		login.login();
-		Thread.sleep(4000);
-		String expected = "News";
-		if(driver.getTitle().equals(expected))
-		{
-			utilities = new Utilites(driver,test);
-			utilities.passsnaps(driver);
-			utilities.WriteExcel(0, 1, 2, "Pass");
-		}
-		else
-		{
-			utilities = new Utilites(driver,test);
-			utilities.failsnaps(driver);
-			utilities.WriteExcel(0, 1, 2, "Fail");
-		}
-	}
-	@Test(enabled=false,priority=8)
-	public void clickontask() throws Exception
-	{
-		sharefunctions.click(headers.Tasktab);
-		
-		Thread.sleep(4000);
-		String expected = "Tasks";
-		if(driver.getTitle().equals(expected))
-		{
-			utilities = new Utilites(driver,test);
-			utilities.passsnaps(driver);
-		}
-		else
-		{
-			utilities = new Utilites(driver,test);
-			utilities.failsnaps(driver);
-		}
-	}
-	@Test(enabled=false,priority = 9)
-	public void clickonresource() throws Exception
-	{
-		//headers = new Headers(driver);
-		//utilities = new Utilites(driver);
-		Thread.sleep(4000);
-		String task = driver.findElement(headers.providedemandtask).getText();
-		int demandID = utilities.demandid(0,1,3);
-		String demand = Integer.toString(demandID);	 
-		if(task.contains(demand))
-		{
-			sharefunctions.click(headers.providedemandtask);
-		}
-	else
-	{
-		System.out.println("no such demand");
-	}
-		String expected = driver.getTitle();
-		if(expected.contains("Provide demand"))
-		{
-			utilities.passsnaps(driver);
-		}
-		else
-		{
-			utilities.failsnaps(driver);
-		}
 	}
 }
+	

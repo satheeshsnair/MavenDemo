@@ -43,21 +43,21 @@ public class TestBase {
 	}
 
 //	@AfterTest
-	public void getResult(ITestResult result) {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " FAILED ", ExtentColor.RED));
-			test.fail(result.getThrowable());
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " PASSED ", ExtentColor.GREEN));
-		} else {
-			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
-			test.skip(result.getThrowable());
-		}
-	}
+//	public void getResult(ITestResult result) {
+//		if (result.getStatus() == ITestResult.FAILURE) {
+//			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " FAILED ", ExtentColor.RED));
+//			test.fail(result.getThrowable());
+//		} else if (result.getStatus() == ITestResult.SUCCESS) {
+//			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " PASSED ", ExtentColor.GREEN));
+//		} else {
+//			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
+//			test.skip(result.getThrowable());
+//		}
+//	}
 
 	@AfterSuite
 	public void tearDown() {
-//		driver.quit();
+		//driver.quit();
 		// to write or update test information to reporter
 		report.flush();
 	}

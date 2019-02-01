@@ -27,7 +27,7 @@ public class Utilites {
 	public WebDriver driver;
 	public Utilites utilities;
 	public int i,j,rowcount,demand;
-	public String uname;
+	public String uname, sow;
 	public String pwd;
 	static XSSFRow row;
 	static XSSFWorkbook wb;
@@ -53,6 +53,7 @@ public class Utilites {
 		rowcount = sh1.getLastRowNum();
 		uname = sh1.getRow(row).getCell(column).getStringCellValue();
 		pwd = sh1.getRow(row).getCell(column).getStringCellValue();
+		//sow = sh1.getRow(row).getCell(column).getStringCellValue();
 	}
 	
 	public void WriteExcel(int sheetnum, int row, int column, String value) throws IOException
@@ -119,4 +120,20 @@ public class Utilites {
 	    return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new java.util.Date());
 	}
 	
+	public String SOW(int sheetnum, int row, int column)
+	{
+		FileInputStream fis;
+		String SOW = null;
+		try {
+			fis = new FileInputStream(Excel);
+			wb = new XSSFWorkbook(fis);
+			sh1=wb.getSheetAt(sheetnum);
+			SOW = sh1.getRow(row).getCell(column).getStringCellValue();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return SOW;
+	}
 }

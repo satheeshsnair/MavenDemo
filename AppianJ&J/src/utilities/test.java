@@ -1,6 +1,7 @@
 package utilities;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -11,6 +12,7 @@ import org.apache.commons.math3.genetics.NPointCrossover;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -25,7 +27,8 @@ import jj.pages.AddNewPosition;
 public class test {
 	
 	public static WebDriver driver;
-	public int i,j,rowcount;
+	String i;
+	public int j,rowcount;
 	public String uname;
 	public String pwd;
 	static XSSFRow row;
@@ -52,19 +55,25 @@ public class test {
 //		System.out.println(sh1.getRow(1).getCell(2).getStringCellValue());
 	}
 	
-//	@SuppressWarnings("unused")
-//	public void test2(int sheetnum, int row, int column) throws IOException 
-//	{
-//		FileInputStream fis = new FileInputStream(Excel);
-//		wb = new XSSFWorkbook(fis);
-//		sh1=wb.getSheetAt(sheetnum);
-//		//rowcount = sh1.getLastRowNum();
-//		//Cell = sh1.getRow(row).getCell(column).getDateCellValue();
-//		Cell = sh1.getRow(row).getCell(column).getDateCellValue();
-//		//System.out.println(demand);
-//		//pwd = sh1.getRow(row).getCell(column).getStringCellValue();
-//		
-//	}
+	
+	public  String test1(int sheetnum, int row, int column) throws IOException 
+	{
+		FileInputStream fis;
+		String SOW = null;
+		try {
+			fis = new FileInputStream(Excel);
+			wb = new XSSFWorkbook(fis);
+			sh1=wb.getSheetAt(sheetnum);
+			SOW = sh1.getRow(row).getCell(column).getStringCellValue();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println(SOW);
+		//return column;
+		return SOW;
+	}
 	
 	public void test2(int sheetnum, int row, int column) throws IOException 
 	{
@@ -84,16 +93,14 @@ public class test {
 	public void click() throws InterruptedException 
 	{
 		Thread.sleep(2000);
-		WebElement ele = driver.findElement(By.xpath("//span[contains(text(),'Position Title')]/../following-sibling::div//div[@role='listbox']"));
-		System.out.println(ele.getTagName());
 	}
 
 
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		test t = new test();
-		t.click();
-		//t.test2(1,1,0);
+		//t.click();
+		t.test1(1,1,3);
 		//System.out.println(cellDate);
 	}
 

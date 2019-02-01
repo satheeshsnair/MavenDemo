@@ -26,9 +26,10 @@ public class Headers
 	/*********Task Locator***************/
 	public By firsttask = By.xpath("(//*[@class='gwt-Anchor appian-feed-entry-author'])[1]");
 	public By acceptbtn = By.xpath("//button[text()='Accept']");
-	//public By firstprovidedemandtask = By.xpath("(//*[contains(text(),'Provide')])[1]");
 	int demandid = utils.demandid(1, 1, 0);
 	public By providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");
+	String sow = utils.SOW(1,1,3);
+	public By provideresource = By.xpath("//a[contains(text(),'" + sow + "')]");
 	public By addnewposition = By.xpath("(//*[@class='LinkedItem---richtext_link elements---global_a'])[4]");
 	
 	public Headers(WebDriver driver)

@@ -42,7 +42,7 @@ public class SharedFunctions {
 	
 	public void click(By locator) throws InterruptedException 
 	{
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driver.findElement(locator).click();
 		test.pass("Clicked");
 	}
