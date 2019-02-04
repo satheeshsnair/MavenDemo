@@ -5,15 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import utilities.ExtentManager;
 
@@ -24,13 +21,15 @@ public class TestBase {
 	protected ExtentTest test;
 
 	@BeforeSuite
-	public void setup() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\satheeshnair\\Desktop\\infocampus\\Softwares\\Selenium Jars\\chromedriver.exe");
+	public void setup() 
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\satheeshnair\\Desktop\\infocampus\\Softwares\\Selenium Jars\\chromedriver.exe");
+		System.setProperty("webdriver.ie.driver","C:\\Users\\satheeshnair\\Desktop\\infocampus\\jars\\IEDriverServer.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		driver = new ChromeDriver(options);
 		url = "https://jnjtrain.appiancloud.com/suite/portal/login.jsp";
+		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}

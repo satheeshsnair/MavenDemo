@@ -3,22 +3,18 @@ package utilities;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.apache.commons.math3.genetics.NPointCrossover;
-import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -40,8 +36,20 @@ public class test {
 	public AddNewPosition np;
 	static Utilites utils = new Utilites(driver, test);
 	static int demandid = utils.demandid(1, 1, 0);
+	protected String url;
 	
-	
+//	public void setup() throws InterruptedException {
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Users\\satheeshnair\\Desktop\\infocampus\\Softwares\\Selenium Jars\\chromedriver.exe");
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--start-maximized");
+//		driver = new ChromeDriver(options);
+//		url = "https://encodable.com/uploaddemo/";
+//		driver.get(url);
+//		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//		upload();
+//	}
 	
 	public void WriteExcel(int sheetnum, int row, int column, String value) throws IOException
 	{
@@ -94,13 +102,23 @@ public class test {
 	{
 		Thread.sleep(2000);
 	}
-
-
+	
+//	public void upload() throws InterruptedException
+//	{
+//		Thread.sleep(3000);
+//		WebElement element = driver.findElement(By.xpath("//*[@id='uploadname1']"));
+//		Thread.sleep(3000);
+//		element.click();
+//		element.sendKeys("C:\\Users\\satheeshnair\\Desktop\\Dummy1.docx");
+//	}
+	
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		test t = new test();
 		//t.click();
-		t.test1(1,1,3);
+		//t.test1(1,1,3);
+//		t.setup();
+		
 		//System.out.println(cellDate);
 	}
 

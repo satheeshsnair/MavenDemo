@@ -1,5 +1,7 @@
 package jj.test;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.Test;
 
 import jj.pages.AddNewPosition;
@@ -118,7 +120,7 @@ public class TC_AddNewResource extends TestBase
 		}
 	}
 	@Test(enabled =true, priority=4)
-	public void enterresourcedetails() throws InterruptedException
+	public void enterresourcedetails() throws InterruptedException, AWTException
 	{
 		sharefunctions.sendkey(resource.Firstname, "Test first name");
 		sharefunctions.sendkey(resource.Lastname, "Test Last name");
@@ -140,11 +142,20 @@ public class TC_AddNewResource extends TestBase
 		sharefunctions.dropdown(resource.skill);
 		sharefunctions.dropdown(resource.Experience);
 		sharefunctions.click(resource.isprimary);
-		resource.upload("C:\\Users\\satheeshnair\\Desktop\\Dummy1");
+		resource.upload("C:\\Users\\satheeshnair\\Desktop\\Dummy1.docx");
 		sharefunctions.sendkey(resource.empID, "0000069");
 		sharefunctions.click(resource.Addlanguage);
 		sharefunctions.dropdown(resource.language);
 		sharefunctions.click(resource.isprimarylang);
 		sharefunctions.click(resource.next_Submit);
+		sharefunctions.click(resource.next_Submit);
+		sharefunctions.click(resource.alert_yes);
+	}
+	@Test(enabled=true,priority = 5)
+	public void logout() throws InterruptedException
+	{
+		sharefunctions.click(headers.logo);
+		Thread.sleep(2000);
+		sharefunctions.click(headers.logout);
 	}
 }

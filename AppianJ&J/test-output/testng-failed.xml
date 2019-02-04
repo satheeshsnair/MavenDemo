@@ -3,18 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jj.test.TC_AddNewPositionandResource">
+      <class name="jj.test.TC_AddNewResource">
         <methods>
-          <include name="logout"/>
-          <include name="addnewposition"/>
-          <include name="clickondemand"/>
-          <include name="addposition"/>
           <include name="tearDown"/>
-          <include name="header"/>
-          <include name="submitposition"/>
+          <include name="enterresourcedetails"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- jj.test.TC_AddNewPositionandResource -->
+      </class> <!-- jj.test.TC_AddNewResource -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
