@@ -21,7 +21,6 @@ public class TC_AddNewResource extends TestBase
 	SharedFunctions sharefunctions;
 	ResourcesPage resource;
 	
-	
 	@Test(enabled=true,priority=0)
 	public void loginasvendor() throws Exception
 	{
