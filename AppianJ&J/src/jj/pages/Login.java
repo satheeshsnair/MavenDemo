@@ -32,6 +32,7 @@ public class Login extends Utilities {
 	public  By error1 = By.xpath("//*[@id='loginForm']/div[1]");
 	String error = "The username/password entered is invalid. Usernames and passwords are case sensitive.";
 	Utilites utilites;
+	
 	public Login(WebDriver driver,ExtentTest test) {
 		this.driver = driver;
 		this.test = test;

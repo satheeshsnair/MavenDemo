@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jj.test.TC_AddNewResource">
+      <class name="jj.test.TC_OrderOwner_Approval">
         <methods>
+          <include name="clickonpositionid"/>
+          <include name="logout"/>
           <include name="tearDown"/>
-          <include name="enterresourcedetails"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- jj.test.TC_AddNewResource -->
+      </class> <!-- jj.test.TC_OrderOwner_Approval -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

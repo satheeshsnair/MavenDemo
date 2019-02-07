@@ -61,16 +61,6 @@ public class ResourcesPage {
 //		test.pass("Entered sow: " + utilites.sow);
 //	}
 	
-//	public void upload(String path) throws InterruptedException
-//	{
-//		Thread.sleep(3000);
-//		WebElement element = driver.findElement(upload);
-//		Thread.sleep(3000);
-//		element.click();
-//		Thread.sleep(3000);
-//		element.sendKeys(path);
-//		Thread.sleep(3000);
-//	}
 	
 	public void upload(String path) throws InterruptedException, AWTException
 	{

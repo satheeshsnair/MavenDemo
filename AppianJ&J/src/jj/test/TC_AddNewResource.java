@@ -72,6 +72,7 @@ public class TC_AddNewResource extends TestBase
 	{
 		initializeReport();
 		String sow = utilities.SOW(1,1,3);
+		//String sow = utilities.readexcel(sheetnum, row, column);
 		if(sharefunctions.isXpathExists(headers.provideresource)) {
 			String task = driver.findElement(headers.provideresource).getText();
 			if(task.contains(sow))
@@ -121,6 +122,7 @@ public class TC_AddNewResource extends TestBase
 	@Test(enabled =true, priority=4)
 	public void enterresourcedetails() throws InterruptedException, AWTException
 	{
+		initializeReport();
 		sharefunctions.sendkey(resource.Firstname, "Test first name");
 		sharefunctions.sendkey(resource.Lastname, "Test Last name");
 		sharefunctions.sendkey(resource.email, "t@t.com");
@@ -153,6 +155,7 @@ public class TC_AddNewResource extends TestBase
 	@Test(enabled=true,priority = 5)
 	public void logout() throws InterruptedException
 	{
+		initializeReport();
 		sharefunctions.click(headers.logo);
 		Thread.sleep(2000);
 		sharefunctions.click(headers.logout);

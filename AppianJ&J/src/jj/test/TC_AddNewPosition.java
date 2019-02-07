@@ -156,6 +156,7 @@ public class TC_AddNewPosition extends TestBase
 	@Test(enabled=true,priority = 5)
 	public void submitposition() throws InterruptedException
 	{
+		initializeReport();
 		sharefunctions.click(newposition.save_complete_submit);
 		if(sharefunctions.isXpathExists(newposition.submit_form_yes))
 		{
@@ -166,6 +167,7 @@ public class TC_AddNewPosition extends TestBase
 	@Test(enabled=true,priority = 6)
 	public void logout() throws InterruptedException
 	{
+		initializeReport();
 		sharefunctions.click(headers.logo);
 		Thread.sleep(2000);
 		sharefunctions.click(headers.logout);

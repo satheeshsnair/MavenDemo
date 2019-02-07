@@ -47,24 +47,37 @@ public class Utilites {
 	
 	public void readexcel(int sheetnum, int row, int column) throws Exception
 	{
-		FileInputStream fis = new FileInputStream(Excel);
-		wb = new XSSFWorkbook(fis);
-		sh1=wb.getSheetAt(sheetnum);
-		rowcount = sh1.getLastRowNum();
-		uname = sh1.getRow(row).getCell(column).getStringCellValue();
-		pwd = sh1.getRow(row).getCell(column).getStringCellValue();
-		//sow = sh1.getRow(row).getCell(column).getStringCellValue();
+		try
+		{
+			FileInputStream fis = new FileInputStream(Excel);
+			wb = new XSSFWorkbook(fis);
+			sh1=wb.getSheetAt(sheetnum);
+			rowcount = sh1.getLastRowNum();
+			uname = sh1.getRow(row).getCell(column).getStringCellValue();
+			pwd = sh1.getRow(row).getCell(column).getStringCellValue();
+			//sow = sh1.getRow(row).getCell(column).getStringCellValue();
+		}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public void WriteExcel(int sheetnum, int row, int column, String value) throws IOException
 	{
-		FileInputStream fis = new FileInputStream(Excel);
-		wb = new XSSFWorkbook(fis);
-		sh1=wb.getSheetAt(sheetnum);
-		sh1.getRow(row).createCell(column).setCellValue(value);
-		FileOutputStream fos = new FileOutputStream(Excel);
-		wb.write(fos);
-		test.pass("Wrote to excel:" + fos);
+		try {
+				FileInputStream fis = new FileInputStream(Excel);
+				wb = new XSSFWorkbook(fis);
+				sh1=wb.getSheetAt(sheetnum);
+				sh1.getRow(row).createCell(column).setCellValue(value);
+				FileOutputStream fos = new FileOutputStream(Excel);
+				wb.write(fos);
+				test.pass("Wrote to excel:" + fos);
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public int demandid(int sheetnum, int row, int column)
@@ -76,13 +89,12 @@ public class Utilites {
 			sh1=wb.getSheetAt(sheetnum);
 			rowcount = sh1.getLastRowNum();
 			return demand = (int)sh1.getRow(row).getCell(column).getNumericCellValue();
-//			test.pass("Demand ID:" + demand);
-//			return demand;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		test.pass("Deamind ID entered" + demand);
 		return column;
 	}
 	
@@ -134,6 +146,7 @@ public class Utilites {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		//test.pass("SOW entered" + SOW);
 		return SOW;
 	}
 }

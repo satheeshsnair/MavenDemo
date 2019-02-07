@@ -25,19 +25,18 @@ public class SharedFunctions {
 	
 	public void dropdown(By locator) throws InterruptedException
 	{
-		
-		Thread.sleep(3000);
-		WebElement element = driver.findElement(locator);
-		Actions action = new Actions(driver);
-		action.moveToElement(element).click().build().perform();
-		Thread.sleep(2000);
-		action.sendKeys(Keys.ARROW_DOWN).build().perform();
-		Thread.sleep(2000);
-		action.sendKeys(Keys.ENTER).build().perform();
-		Thread.sleep(2000);
-		action.sendKeys(Keys.TAB).build().perform();
-		Thread.sleep(2000);
-		test.pass("Selected options from" );
+			Thread.sleep(3000);
+			WebElement element = driver.findElement(locator);
+			Actions action = new Actions(driver);
+			action.moveToElement(element).click().build().perform();
+			Thread.sleep(2000);
+			action.sendKeys(Keys.ARROW_DOWN).build().perform();
+			Thread.sleep(2000);
+			action.sendKeys(Keys.ENTER).build().perform();
+			Thread.sleep(2000);
+			action.sendKeys(Keys.TAB).build().perform();
+			Thread.sleep(2000);
+			test.pass("Selected options from" );
 	}
 	
 	public void click(By locator) throws InterruptedException 
@@ -55,11 +54,13 @@ public class SharedFunctions {
 		 c.add(Calendar.DATE, days); // Adding 7 days
 		 String output = sdf.format(c.getTime());
 		 driver.findElement(locator).sendKeys(output);
+		 test.pass("Entered date" + output);
 	}
 	public void sendkey(By locator, String value) throws InterruptedException 
 	{
 		Thread.sleep(2000);
 		driver.findElement(locator).sendKeys(value);
+		test.pass("Entered text" + value);
 	}
 	public boolean isXpathExists(By xpath) {
 		try {
