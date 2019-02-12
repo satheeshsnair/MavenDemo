@@ -2,9 +2,11 @@ package jj.test;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+
+import static org.testng.AssertJUnit.assertTrue;
+
 import java.awt.AWTException;
 
-import org.testng.annotations.Test;
 
 import jj.pages.AddNewPosition;
 import jj.pages.Headers;
@@ -64,11 +66,13 @@ public class TC_AddNewResource extends TestBase
 		{
 			utilities = new Utilites(driver,test);
 			utilities.passsnaps(driver);
+			test.pass("CLicked on Task Tab");
 		}
 		else
 		{
 			utilities = new Utilites(driver,test);
 			utilities.failsnaps(driver);
+			test.fail("Failed to click Task Tab");
 		}
 	}
 	@Test(enabled=true,priority = 2)
@@ -92,8 +96,9 @@ public class TC_AddNewResource extends TestBase
 			}
 		}else
 		{
-			Assert.fail("no such demand");
+			test.fail("no such demand");
 			utilities.failsnaps(driver);
+			Assert.fail("no such demand");
 		}
 	}
 	
@@ -109,25 +114,27 @@ public class TC_AddNewResource extends TestBase
 			sharefunctions.click(headers.acceptbtn);
 			Thread.sleep(2000);
 		}
-		sharefunctions.click(resource.position);
-		Thread.sleep(3000);
-		String expected = driver.getTitle();
-		Thread.sleep(3000);
-		if(expected.contains("Provide Resource"))
-		{
-			utilities.passsnaps(driver);
-			test.pass("Clicked on Add position button");
-		}
-		else
-		{
+		try {
+			sharefunctions.click(resource.position);
+			Thread.sleep(3000);
+			String expected = driver.getTitle();
+			Thread.sleep(3000);
+			if(expected.contains("Provide Resource"))
+			{
+				utilities.passsnaps(driver);
+				test.pass("Clicked on Add position button");
+			}
+		}catch (Exception e) {
 			utilities.failsnaps(driver);
+			test.fail("Failed to Click on Add position button");
 			Assert.fail("Failed to Click on Add position button");
 		}
 	}
 	@Test(enabled =true, priority=4)
-	public void enterresourcedetails() throws InterruptedException, AWTException
+	public void enterresourcedetails() throws Exception
 	{
 		initializeReport();
+		try {
 		sharefunctions.sendkey(resource.Firstname, "Test first name");
 		sharefunctions.sendkey(resource.Lastname, "Test Last name");
 		sharefunctions.sendkey(resource.email, "t@t.com");
@@ -156,6 +163,13 @@ public class TC_AddNewResource extends TestBase
 		sharefunctions.click(resource.next_Submit);
 		sharefunctions.click(resource.next_Submit);
 		sharefunctions.click(resource.alert_yes);
+		}
+		catch (Exception e) {
+			utilities.failsnaps(driver);
+			test.fail("Not able to complete resource details");
+			Assert.fail("Not able to complete resource details");
+			assertTrue(false);
+		}
 	}
 	@Test(enabled=true,priority = 5)
 	public void logout() throws InterruptedException
