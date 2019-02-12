@@ -21,8 +21,8 @@ public class Headers
 	public By Records = By.xpath("(//*[@class='appian-menu-item'])[2]");
 	public By Reportstab = By.xpath("(//*[@class='appian-menu-item'])[3]");
 	public By logo = By.xpath("//a[@class='gwt-Anchor pull-down-toggle']/span");
-	public By logout = By.xpath("(//a[@class='gwt-Anchor pull-down-menu-item']/span)[3]");
-	
+	//public By logout = By.xpath("(//a[@class='gwt-Anchor pull-down-menu-item']/span)[6]");
+	public By logout = By.xpath("//span[contains(text(),'Sign Out')]");
 	/*********Task Locator***************/
 	public By firsttask = By.xpath("(//*[@class='gwt-Anchor appian-feed-entry-author'])[1]");
 	public By acceptbtn = By.xpath("//button[text()='Accept']");

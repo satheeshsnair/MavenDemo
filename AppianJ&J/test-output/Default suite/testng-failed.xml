@@ -3,13 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jj.test.TC_OrderOwner_Approval">
+      <class name="jj.test.TC_AddNewPosition">
         <methods>
-          <include name="clickonpositionid"/>
+          <include name="addnewposition"/>
+          <include name="clickondemand"/>
+          <include name="addposition"/>
+          <include name="submitposition"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- jj.test.TC_OrderOwner_Approval -->
+      </class> <!-- jj.test.TC_AddNewPosition -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

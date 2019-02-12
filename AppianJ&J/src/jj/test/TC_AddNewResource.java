@@ -1,5 +1,7 @@
 package jj.test;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
 import java.awt.AWTException;
 
 import org.testng.annotations.Test;
@@ -31,6 +33,7 @@ public class TC_AddNewResource extends TestBase
 		login.password(0,1,1); //sheet num, row , column
 		login.login();
 		String expected = "News";
+		Thread.sleep(3000);
 		if(driver.getTitle().equals(expected))
 		{
 			utilities = new Utilites(driver,test);
@@ -56,6 +59,7 @@ public class TC_AddNewResource extends TestBase
 		
 		Thread.sleep(4000);
 		String expected = "Tasks";
+		Thread.sleep(3000);
 		if(driver.getTitle().equals(expected))
 		{
 			utilities = new Utilites(driver,test);
@@ -79,6 +83,7 @@ public class TC_AddNewResource extends TestBase
 			{
 				sharefunctions.click(headers.provideresource);
 				String expected = driver.getTitle();
+				Thread.sleep(3000);
 				if(expected.contains("Provide demand"))
 				{
 					utilities.passsnaps(driver);
@@ -87,7 +92,7 @@ public class TC_AddNewResource extends TestBase
 			}
 		}else
 		{
-			test.fail("no such demand");
+			Assert.fail("no such demand");
 			utilities.failsnaps(driver);
 		}
 	}
@@ -116,7 +121,7 @@ public class TC_AddNewResource extends TestBase
 		else
 		{
 			utilities.failsnaps(driver);
-			test.fail("Failed to Click on Add position button");
+			Assert.fail("Failed to Click on Add position button");
 		}
 	}
 	@Test(enabled =true, priority=4)
@@ -155,7 +160,6 @@ public class TC_AddNewResource extends TestBase
 	@Test(enabled=true,priority = 5)
 	public void logout() throws InterruptedException
 	{
-		initializeReport();
 		sharefunctions.click(headers.logo);
 		Thread.sleep(2000);
 		sharefunctions.click(headers.logout);

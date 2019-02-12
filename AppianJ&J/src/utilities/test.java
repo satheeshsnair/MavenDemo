@@ -20,6 +20,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import com.aventstack.extentreports.ExtentTest;
 
 import jj.pages.AddNewPosition;
+import jj.pages.Login;
 
 public class test {
 	
@@ -38,19 +39,24 @@ public class test {
 	static Utilites utils = new Utilites(driver, test);
 	static int demandid = utils.demandid(1, 1, 0);
 	protected String url;
+	Login login;
 	
-//	public void setup() throws InterruptedException {
-//		System.setProperty("webdriver.chrome.driver",
-//				"C:\\Users\\satheeshnair\\Desktop\\infocampus\\Softwares\\Selenium Jars\\chromedriver.exe");
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("--start-maximized");
-//		driver = new ChromeDriver(options);
-//		url = "https://encodable.com/uploaddemo/";
-//		driver.get(url);
-//		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-//		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-//		upload();
-//	}
+	public void setup() throws Exception {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\satheeshnair\\Desktop\\infocampus\\Softwares\\Selenium Jars\\chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+		driver = new ChromeDriver(options);
+		url = "https://jnjtrain.appiancloud.com/suite/portal/login.jsp";
+		driver.get(url);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		login = new Login(driver,test); //initialize objectl
+		login.username(0,1,0); //sheet num, row , column
+		login.password(0,1,1); //sheet num, row , column
+		login.login();
+		//upload();
+		logout();
+	}
 	
 	public void WriteExcel(int sheetnum, int row, int column, String value) throws IOException
 	{
@@ -130,14 +136,21 @@ public class test {
 			e.printStackTrace();
 		}
 	}
+	public void logout() throws InterruptedException
+	{
+		driver.findElement(By.xpath("//a[@class='gwt-Anchor pull-down-toggle']/span")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//a[@class='gwt-Anchor pull-down-menu-item']/span)[6]")).click();
+		
+	}
 	
 	public static void main(String[] args) throws Exception 
 	{
 		test t = new test();
 		//t.click();
 		//t.test1(1,1,3);
-//		t.setup();
-		t.readexcel();
+		t.setup();
+//		t.readexcel();
 		
 		//System.out.println(cellDate);
 	}
