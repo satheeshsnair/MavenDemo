@@ -36,15 +36,12 @@ public class SharedFunctions {
 			Thread.sleep(2000);
 			action.sendKeys(Keys.TAB).build().perform();
 			Thread.sleep(2000);
-			test.pass("Selected options from" );
 	}
 	
 	public void click(By locator) throws InterruptedException 
 	{
 		Thread.sleep(4000);
-	
 		driver.findElement(locator).click();
-		
 	}
 	public void date(By locator, int days) throws InterruptedException
 	{
@@ -55,13 +52,11 @@ public class SharedFunctions {
 		 c.add(Calendar.DATE, days); // Adding 7 days
 		 String output = sdf.format(c.getTime());
 		 driver.findElement(locator).sendKeys(output);
-		 test.pass("Entered date" + output);
 	}
 	public void sendkey(By locator, String value) throws InterruptedException 
 	{
 		Thread.sleep(2000);
 		driver.findElement(locator).sendKeys(value);
-		test.pass("Entered text" + value);
 	}
 	public boolean isXpathExists(By xpath) {
 		try {

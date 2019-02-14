@@ -5,7 +5,8 @@
     <classes>
       <class name="jj.test.TC_OrderOwner_Approval">
         <methods>
-          <include name="clickondemand"/>
+          <include name="clickonpositionid"/>
+          <include name="logout"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

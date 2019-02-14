@@ -25,7 +25,7 @@ public class AddNewPosition {
 	public By offering = By.xpath("//span[contains(text(),'Offering')]/../following-sibling::div//div[@role='listbox']");
 	public By skilllevel = By.xpath("//span[contains(text(),'Skill Level')]/../following-sibling::div//div[@role='listbox']");
 	public By save_complete_submit = By.xpath("//*[@class='Button---btn Button---default_direction Button---primary appian-context-first-in-list appian-context-last-in-list']");
-	public By submit_form_yes = By.xpath("(//*[@class='Button---btn Button---default_direction Button---primary appian-context-first-in-list appian-context-last-in-list'])[1]");
+	public By submit_form_yes = By.xpath("(//*[@class='Button---btn Button---default_direction Button---primary appian-context-first-in-list appian-context-last-in-list'])[2]");
 	public By searchicon = By.xpath("//*[@class='DocumentImage---image_link elements---global_a']/img");
 	public By alert = By.xpath("//div[@class='FieldLayout---field_error']");
 	

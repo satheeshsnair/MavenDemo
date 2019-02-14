@@ -5,9 +5,6 @@ import org.testng.Assert;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-import java.awt.AWTException;
-
-
 import jj.pages.AddNewPosition;
 import jj.pages.Headers;
 import jj.pages.Login;
@@ -86,12 +83,13 @@ public class TC_AddNewResource extends TestBase
 			if(task.contains(sow))
 			{
 				sharefunctions.click(headers.provideresource);
+				Thread.sleep(3000);
+				test.pass("Clicked on demand" + sow);
 				String expected = driver.getTitle();
 				Thread.sleep(3000);
 				if(expected.contains("Provide demand"))
 				{
 					utilities.passsnaps(driver);
-					test.pass("Clicked on demand" + sow);
 				}
 			}
 		}else
@@ -170,6 +168,8 @@ public class TC_AddNewResource extends TestBase
 			Assert.fail("Not able to complete resource details");
 			assertTrue(false);
 		}
+		utilities.passsnaps(driver);
+		test.pass("Resource details entered successfully!");
 	}
 	@Test(enabled=true,priority = 5)
 	public void logout() throws InterruptedException
