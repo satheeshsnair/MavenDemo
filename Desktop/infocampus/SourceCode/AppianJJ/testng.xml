@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none" preserve-order="true">
+  <test thread-count="1" name="Test">
+    <classes>
+      <class name="regression.TC_AddNewPosition"/>
+      <class name="regression.TC_AddNewResource"/>
+      <class name="regression.TC_OrderOwner_Approval"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
