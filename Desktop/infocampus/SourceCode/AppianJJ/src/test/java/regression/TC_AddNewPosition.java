@@ -77,38 +77,14 @@ public class TC_AddNewPosition extends DriverFactory
 		newposition.Selectskilllevel();
 		newposition.clickonsave();
 		newposition.alert();
-		newposition.clicksubmitbutton();
 	}
-	@Test(enabled=false,priority = 5)
+	@Test(enabled=true,priority = 5)
 	public void submitposition() throws Exception
 	{
 		initializeExtentReport("Submit Position");
 		newposition.clicksubmitbutton();
-//		try {
-//		sharefunctions.click(newposition.save_complete_submit);
-//		utilities.passsnaps(driver);
-//		testInstance.pass("Clicked on Submit button");
-//		
-//		}
-//		catch (Exception e) {
-//			testInstance.fail("Submit button missing");
-//			utilities.failsnaps(driver);
-//			Assert.fail("Submit button missing");
-//		}
-//		try {
-//		if(sharefunctions.isXpathExists(newposition.submit_form_yes))
-//		{
-//			sharefunctions.click(newposition.submit_form_yes);
-//			utilities.passsnaps(driver);
-//			testInstance.pass("Posiiton submiited");
-//		}
-//		}catch (Exception e) {
-//			testInstance.fail("Posiiton not submiited");
-//			utilities.failsnaps(driver);
-//			Assert.fail("Posiiton not submiited");
-//		}
 	}
-	@Test(enabled=false,priority = 6)
+	@Test(enabled=true,priority = 6)
 	public void logout() throws InterruptedException
 	{
 		newposition.logout();

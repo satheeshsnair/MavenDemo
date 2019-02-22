@@ -117,7 +117,7 @@ public class AddNewPosition extends DriverFactory {
 			{
 				sharefunctions.click(providedemandtask);
 				String expected = driver.getTitle();
-				sharefunctions.wait();
+				sharefunctions.waitTime();
 				if(expected.contains("Provide demand"))
 				{
 					utilities.passsnaps(driver);
@@ -137,7 +137,7 @@ public class AddNewPosition extends DriverFactory {
 		{
 			sharefunctions.click(acceptbtn);
 			test.pass("Clicked on Add position button");
-			sharefunctions.wait();
+			sharefunctions.waitTime();
 		}
 		try {
 			sharefunctions.click(addnewposition);
@@ -147,19 +147,19 @@ public class AddNewPosition extends DriverFactory {
 			Assert.fail("Add New position button missing");
 		}
 		sharefunctions.waitTime();
-		String expected = driver.getTitle();
-		sharefunctions.waitTime();
-		if(expected.contains("Provide demand"))
-		{
-			utilities.passsnaps(driver);
-			test.pass("Clicked on Add position button");
-		}
-		else
-		{
-			utilities.failsnaps(driver);
-			test.fail("Failed to Click on Add position button");
-			Assert.fail("Failed to Click on Add position button");
-		}
+//		String expected = driver.getTitle();
+//		sharefunctions.waitTime();
+//		if(expected.contains("Provide demand"))
+//		{
+//			utilities.passsnaps(driver);
+//			test.pass("Clicked on Add position button");
+//		}
+//		else
+//		{
+//			utilities.failsnaps(driver);
+//			test.fail("Failed to Click on Add position button");
+//			Assert.fail("Failed to Click on Add position button");
+//		}
 	}
 	public void Selectposition() throws Exception
 	{
@@ -360,7 +360,7 @@ public class AddNewPosition extends DriverFactory {
 	public void alert() throws Exception
 	{
 		sharefunctions.waitTime();
-		if(sharefunctions.isXpathExists(newposition.alert))
+		if(sharefunctions.isXpathExists(alert))
 		{
 			utilities.failsnaps(driver);
 			test.fail("Missed some values");
@@ -375,7 +375,7 @@ public class AddNewPosition extends DriverFactory {
 	public void clicksubmitbutton() throws Exception
 	{
 		try {
-			sharefunctions.click(newposition.save_complete_submit);
+			sharefunctions.click(save_complete_submit);
 			utilities.passsnaps(driver);
 			test.pass("Clicked on Submit button");
 			
@@ -386,12 +386,10 @@ public class AddNewPosition extends DriverFactory {
 				Assert.fail("Submit button missing");
 			}
 			try {
-			if(sharefunctions.isXpathExists(newposition.submit_form_yes))
-			{
-				sharefunctions.click(newposition.submit_form_yes);
+				sharefunctions.waitTime();
+				sharefunctions.click(submit_form_yes);
 				utilities.passsnaps(driver);
 				test.pass("Posiiton submiited");
-			}
 			}catch (Exception e) {
 				utilities.failsnaps(driver);
 				test.fail("Posiiton not submiited");
@@ -400,6 +398,7 @@ public class AddNewPosition extends DriverFactory {
 	}
 	public void logout() throws InterruptedException
 	{
+		sharefunctions.waitTime();
 		sharefunctions.click(headers.logo);
 		sharefunctions.waitTime();
 		sharefunctions.click(headers.logout);

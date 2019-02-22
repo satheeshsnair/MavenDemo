@@ -63,7 +63,7 @@ public class DriverFactory extends ExtentManager {
 		extentInstance = xtentMgr.createExtentRep();
 		// Initialize the excel report
 		Thread.sleep(PathConstants.minWaitTime);
-		String baseURL = "https://jnjtrain.appiancloud.com/suite/portal/login.jsp";
+		String baseURL = "https://jnjtest.appiancloud.com/suite/portal/login.jsp";
 		runOnBrowser = browser;
 		driver = new ChromeDriver(createChromeCapabilites());
 		driver.manage().window().maximize();

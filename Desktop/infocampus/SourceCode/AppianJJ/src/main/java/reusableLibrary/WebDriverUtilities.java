@@ -31,7 +31,6 @@ public class WebDriverUtilities {
 			action.moveToElement(element).click().build().perform();
 			waitTime();
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
-			waitTime();
 			action.sendKeys(Keys.ENTER).build().perform();
 			waitTime();
 			action.sendKeys(Keys.TAB).build().perform();
