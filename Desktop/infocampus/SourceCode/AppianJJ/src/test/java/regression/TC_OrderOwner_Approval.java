@@ -27,9 +27,10 @@ public class TC_OrderOwner_Approval extends DriverFactory
 		initializeExtentReport("Login");
 		login = new Login(driver,testInstance); //initialize objectl
 		orderowner = new OrderOwner(driver, testInstance);
-		login.username(0,2,0); //sheet num, row , column
-		login.password(0,2,1); //sheet num, row , column
-		login.login();
+		login.username(0,2,0) //sheet num, row , column
+		.password(0,2,1) //sheet num, row , column
+		.login();
+		
 	}
 	@Test(enabled=true,priority=1)
 	public void clickontask() throws Exception

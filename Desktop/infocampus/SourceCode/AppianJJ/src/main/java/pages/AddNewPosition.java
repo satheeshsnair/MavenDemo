@@ -52,7 +52,7 @@ public class AddNewPosition extends DriverFactory {
 		this.test = test;
 		utilities = new Utilites(driver, test);
 		sharefunctions = new WebDriverUtilities(driver, test);
-//		Headers headers = new Headers(driver, test);
+		headers = new Headers(driver, test);
 		int demandid = utilities.demandid(1, 1, 0);
 		String sow = utilities.SOW(1,1,3);
 		providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");

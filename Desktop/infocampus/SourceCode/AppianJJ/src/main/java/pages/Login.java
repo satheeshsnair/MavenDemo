@@ -4,16 +4,18 @@ import javax.swing.text.Utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import reusableLibrary.WebDriverUtilities;
 import utilities.Utilites;
 
 public class Login extends Utilities {
 	
 	private WebDriver driver;
 	private ExtentTest test;
-	
+	private WebDriverUtilities sharedfuntions;
 //	@FindBy(xpath = "//input[@id='un']")
 //	static
 //	WebElement username;
@@ -36,36 +38,40 @@ public class Login extends Utilities {
 	public Login(WebDriver driver,ExtentTest test) {
 		this.driver = driver;
 		this.test = test;
+		sharedfuntions = new WebDriverUtilities(driver, test);
 	}
 	
-	public void username(int sheetnum, int row, int column) throws Exception
+	public Login username(int sheetnum, int row, int column) throws Exception
 	{
 		utilites = new Utilites(driver, test);
 		utilites.readexcel(sheetnum,row,column);
 		driver.findElement(username1).sendKeys(utilites.uname);
 		test.pass("Entered username: " + utilites.uname);
+		return this;
 	}
 	
-	public  void password(int sheetnum, int row, int column) throws Exception
+	public  Login password(int sheetnum, int row, int column) throws Exception
 	{
 		utilites = new Utilites(driver, test);
 		utilites.readexcel(sheetnum,row,column);
 		driver.findElement(password).sendKeys(utilites.pwd);
 		test.pass("Entered password: " + utilites.pwd);
+		return this;
 	}
 	
-	public boolean login() throws InterruptedException
+	public Login login() throws InterruptedException
 	{
-		driver.findElement(loginbtn).click();
-		if(error.equals("The username/password entered is invalid. Usernames and passwords are case sensitive."))
+		sharedfuntions.click(loginbtn);
+		if(error.equals("The username/password entered is invalid. Usernames and passwords are case sensitive.."))
 		{
-			//Assert.assertTrue(false);
-			return false;
+			Assert.assertTrue(false);
 		}
 		else 
 		{
-			return true;
+			Assert.assertTrue(true);
+
 		}
+		return this;
 	}
 	
 //	public static void main(String[] args) throws Exception 

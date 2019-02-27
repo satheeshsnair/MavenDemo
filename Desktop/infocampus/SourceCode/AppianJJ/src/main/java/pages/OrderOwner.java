@@ -118,20 +118,20 @@ public class OrderOwner {
 			utilities.failsnaps(driver);
 			Assert.fail("Submit button missing");
 		}
-		String expected = "News";
-		sharefunctions.waitTime();
-		sharefunctions.waitTime();
-		if(driver.getTitle().equals(expected))
-		{
-			test.pass("Reource and position approved");
-			utilities.passsnaps(driver);
-		}
-		else
-		{
-			utilities.failsnaps(driver);
-			test.fail("Not able to approve");
-			Assert.fail("Not able to approve");
-		}
+//		String expected = "News";
+//		sharefunctions.waitTime();
+//		sharefunctions.waitTime();
+//		if(driver.getTitle().equals(expected))
+//		{
+//			test.pass("Reource and position approved");
+//			utilities.passsnaps(driver);
+//		}
+//		else
+//		{
+//			utilities.failsnaps(driver);
+//			test.fail("Not able to approve");
+//			Assert.fail("Not able to approve");
+//		}
 	}
 	public void logout() throws Exception
 	{

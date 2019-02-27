@@ -406,7 +406,7 @@ public class ResourcesPage {
 	{
 		try 
 		{
-			sharefunctions.sendkey(empID, "0000076");
+			sharefunctions.sendkey(empID, "0000080");
 			utilities.passsnaps(driver);
 			test.pass("empID selected");
 		}catch (Exception e) {

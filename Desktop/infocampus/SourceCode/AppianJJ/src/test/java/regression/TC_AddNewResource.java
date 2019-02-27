@@ -83,11 +83,11 @@ public class TC_AddNewResource extends DriverFactory
 		resource.addlang();
 		resource.lang();
 		resource.isprimarylang();
-		resource.next();
 	}
 	@Test(enabled=true,priority=5)
 	public void submitresource() throws Exception
 	{
+		resource.next();
 		resource.submit();
 		resource.alertyes();
 	}
