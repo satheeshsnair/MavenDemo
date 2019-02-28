@@ -43,7 +43,6 @@ public class OrderOwner {
 		sharefunctions.click(headers.Tasktab);
 		sharefunctions.waitTime();
 		String expected = "Tasks";
-		sharefunctions.waitTime();
 		if(driver.getTitle().equals(expected))
 		{
 			utilities.passsnaps(driver);
@@ -82,7 +81,6 @@ public class OrderOwner {
 	}
 	public void clickpositionid() throws Exception
 	{
-		sharefunctions.waitTime();
 		if(sharefunctions.isXpathExists(position_ID))
 		{
 			sharefunctions.click(position_ID);
@@ -136,7 +134,6 @@ public class OrderOwner {
 	public void logout() throws Exception
 	{
 		sharefunctions.click(headers.logo);
-		sharefunctions.waitTime();
 		sharefunctions.click(headers.logout);
 	}
 }

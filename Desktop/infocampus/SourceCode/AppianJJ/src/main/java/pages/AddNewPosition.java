@@ -63,6 +63,7 @@ public class AddNewPosition extends DriverFactory {
 	{
 		//driver.findElement(sponsorwwid).sendKeys(wwid);
 		sharefunctions.sendkey(sponsorwwid, wwid);
+		sharefunctions.waitTime();
 		//driver.findElement(searchicon).click();
 		sharefunctions.click(searchicon);
 		sharefunctions.waitTime();
@@ -93,7 +94,6 @@ public class AddNewPosition extends DriverFactory {
 		sharefunctions.click(locator);
 		sharefunctions.waitTime();
 		String expected = "Tasks";
-		sharefunctions.waitTime();
 		if(driver.getTitle().equals(expected))
 		{
 			utilities.passsnaps(driver);
@@ -116,8 +116,8 @@ public class AddNewPosition extends DriverFactory {
 			if(task.contains(demand))
 			{
 				sharefunctions.click(providedemandtask);
-				String expected = driver.getTitle();
 				sharefunctions.waitTime();
+				String expected = driver.getTitle();
 				if(expected.contains("Provide demand"))
 				{
 					utilities.passsnaps(driver);
@@ -146,20 +146,6 @@ public class AddNewPosition extends DriverFactory {
 			test.fail("Add New position button missing");
 			Assert.fail("Add New position button missing");
 		}
-		sharefunctions.waitTime();
-//		String expected = driver.getTitle();
-//		sharefunctions.waitTime();
-//		if(expected.contains("Provide demand"))
-//		{
-//			utilities.passsnaps(driver);
-//			test.pass("Clicked on Add position button");
-//		}
-//		else
-//		{
-//			utilities.failsnaps(driver);
-//			test.fail("Failed to Click on Add position button");
-//			Assert.fail("Failed to Click on Add position button");
-//		}
 	}
 	public void Selectposition() throws Exception
 	{
@@ -359,7 +345,6 @@ public class AddNewPosition extends DriverFactory {
 	}
 	public void alert() throws Exception
 	{
-		sharefunctions.waitTime();
 		if(sharefunctions.isXpathExists(alert))
 		{
 			utilities.failsnaps(driver);
@@ -386,14 +371,13 @@ public class AddNewPosition extends DriverFactory {
 				Assert.fail("Submit button missing");
 			}
 			try {
-				sharefunctions.waitTime();
 				sharefunctions.click(submit_form_yes);
 				utilities.passsnaps(driver);
-				test.pass("Posiiton submiited");
+				test.pass("Position submiited");
 			}catch (Exception e) {
 				utilities.failsnaps(driver);
 				test.fail("Posiiton not submiited");
-				Assert.fail("Posiiton not submiited");
+				Assert.fail("Position not submiited");
 			}
 	}
 	public void logout() throws InterruptedException

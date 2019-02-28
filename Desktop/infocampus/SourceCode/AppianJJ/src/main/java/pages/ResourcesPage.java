@@ -66,11 +66,10 @@ public class ResourcesPage {
 	
 	public void upload(String path) throws InterruptedException, AWTException
 	{
-		Thread.sleep(3000);
 		WebElement element = driver.findElement(upload);
-		Thread.sleep(3000);
+		sharefunctions.waitTime();
 		element.sendKeys(path);
-		Thread.sleep(3000);
+		sharefunctions.waitTime();
 		
 //		StringSelection ss = new StringSelection(path);
 //		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
@@ -85,7 +84,6 @@ public class ResourcesPage {
 	public void clickontasktab(By locator) throws Exception
 	{
 		sharefunctions.click(locator);
-		sharefunctions.waitTime();
 		String expected = "Tasks";
 		sharefunctions.waitTime();
 		if(driver.getTitle().equals(expected))
@@ -133,13 +131,12 @@ public class ResourcesPage {
 		if(sharefunctions.isXpathExists(headers.acceptbtn))
 		{
 			sharefunctions.click(headers.acceptbtn);
-			Thread.sleep(2000);
+			sharefunctions.waitTime();
 		}
 		try {
 			sharefunctions.click(position);
 			sharefunctions.waitTime();
 			String expected = driver.getTitle();
-			sharefunctions.waitTime();
 			if(expected.contains("Provide Resource"))
 			{
 				utilities.passsnaps(driver);

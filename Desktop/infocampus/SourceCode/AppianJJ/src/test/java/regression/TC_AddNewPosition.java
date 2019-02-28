@@ -29,7 +29,6 @@ public class TC_AddNewPosition extends DriverFactory
 		login.login();
 		newposition.checkheadernews();
 	}
-
 	@Test(enabled=true,priority=1)
 	public void header() throws Exception
 	{
@@ -40,14 +39,12 @@ public class TC_AddNewPosition extends DriverFactory
 		
 		newposition.clickheadertask(headers.Tasktab);
 	}
-	
 	@Test(enabled=true,priority = 2)
 	public void clickondemand() throws Exception
 	{
 		initializeExtentReport("Click on Demand");
 		newposition.clickondemand();
 	}
-	
 	@Test(enabled=true,priority = 3)
 	public void addnewposition() throws Exception
 	{
@@ -76,7 +73,7 @@ public class TC_AddNewPosition extends DriverFactory
 		newposition.Selectoffering();
 		newposition.Selectskilllevel();
 		newposition.clickonsave();
-		newposition.alert();
+		//newposition.alert();
 	}
 	@Test(enabled=true,priority = 5)
 	public void submitposition() throws Exception

@@ -6,10 +6,8 @@
       <class name="regression.TC_OrderOwner_Approval">
         <methods>
           <include name="tearDownFunction"/>
-          <include name="logout"/>
           <include name="clickondemand"/>
           <include name="clickonpositionid"/>
-          <include name="clickontask"/>
           <include name="createExtentInstance"/>
           <include name="operationsOnTestCompletion"/>
           <include name="CreateErrorRepFolder"/>

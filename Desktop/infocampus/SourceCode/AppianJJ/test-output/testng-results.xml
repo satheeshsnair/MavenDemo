@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="4" failed="0" ignored="0" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
     <line>
       <![CDATA[Exception in ExtentManager function]]>
@@ -10,17 +10,32 @@
     <line>
       <![CDATA[C:\Users\satheeshnair\Desktop\infocampus\SourceCode\AppianJJ\ExecutionReports\AutomationTestReport.html]]>
     </line>
+    <line>
+      <![CDATA[ - PASSED.]]>
+    </line>
+    <line>
+      <![CDATA[ - PASSED.]]>
+    </line>
+    <line>
+      <![CDATA[ - PASSED.]]>
+    </line>
+    <line>
+      <![CDATA[ - PASSED.]]>
+    </line>
+    <line>
+      <![CDATA[ - PASSED.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18899" started-at="2019-02-26T10:07:28Z" finished-at="2019-02-26T10:07:47Z">
+  <suite name="Default suite" duration-ms="44527" started-at="2019-02-28T06:34:00Z" finished-at="2019-02-28T06:34:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18899" started-at="2019-02-26T10:07:28Z" finished-at="2019-02-26T10:07:47Z">
+    <test name="Default test" duration-ms="44527" started-at="2019-02-28T06:34:00Z" finished-at="2019-02-28T06:34:44Z">
       <class name="regression.TC_OrderOwner_Approval">
-        <test-method status="PASS" signature="CreateErrorRepFolder()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="CreateErrorRepFolder" is-config="true" duration-ms="34" started-at="2019-02-26T10:07:28Z" finished-at="2019-02-26T10:07:28Z">
+        <test-method status="PASS" signature="CreateErrorRepFolder()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="CreateErrorRepFolder" is-config="true" duration-ms="40" started-at="2019-02-28T06:34:00Z" finished-at="2019-02-28T06:34:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateErrorRepFolder -->
-        <test-method status="PASS" signature="createExtentInstance(java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="createExtentInstance" is-config="true" duration-ms="10246" started-at="2019-02-26T10:07:28Z" finished-at="2019-02-26T10:07:38Z">
+        <test-method status="PASS" signature="createExtentInstance(java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="createExtentInstance" is-config="true" duration-ms="10964" started-at="2019-02-28T06:34:00Z" finished-at="2019-02-28T06:34:11Z">
           <params>
             <param index="0">
               <value>
@@ -37,237 +52,97 @@
             </line>
           </reporter-output>
         </test-method> <!-- createExtentInstance -->
-        <test-method status="PASS" signature="loginasvendor()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="loginasvendor" duration-ms="8610" started-at="2019-02-26T10:07:38Z" finished-at="2019-02-26T10:07:47Z">
+        <test-method status="PASS" signature="loginasvendor()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="loginasvendor" duration-ms="7388" started-at="2019-02-28T06:34:11Z" finished-at="2019-02-28T06:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginasvendor -->
-        <test-method status="FAIL" signature="operationsOnTestCompletion(org.testng.ITestResult, java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="operationsOnTestCompletion(org.testng.ITestResult)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="2" started-at="2019-02-28T06:34:18Z" finished-at="2019-02-28T06:34:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginasvendor status=SUCCESS method=TC_OrderOwner_Approval.loginasvendor()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[ - PASSED.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- operationsOnTestCompletion -->
-        <test-method status="SKIP" signature="clickontask()[pri:1, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="clickontask" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="clickontask()[pri:1, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="clickontask" duration-ms="6342" started-at="2019-02-28T06:34:18Z" finished-at="2019-02-28T06:34:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickontask -->
-        <test-method status="SKIP" signature="operationsOnTestCompletion(org.testng.ITestResult, java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
+        <test-method status="PASS" signature="operationsOnTestCompletion(org.testng.ITestResult)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-28T06:34:25Z" finished-at="2019-02-28T06:34:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickontask status=SUCCESS method=TC_OrderOwner_Approval.clickontask()[pri:1, instance:regression.TC_OrderOwner_Approval@10bdf5e5] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[ - PASSED.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- operationsOnTestCompletion -->
-        <test-method status="SKIP" signature="clickondemand()[pri:2, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="clickondemand" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="clickondemand()[pri:2, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="clickondemand" duration-ms="4316" started-at="2019-02-28T06:34:25Z" finished-at="2019-02-28T06:34:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickondemand -->
-        <test-method status="SKIP" signature="operationsOnTestCompletion(org.testng.ITestResult, java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- operationsOnTestCompletion -->
-        <test-method status="SKIP" signature="clickonpositionid()[pri:3, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="clickonpositionid" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="clickonpositionid()[pri:3, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="clickonpositionid" duration-ms="9081" started-at="2019-02-28T06:34:29Z" finished-at="2019-02-28T06:34:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickonpositionid -->
-        <test-method status="SKIP" signature="operationsOnTestCompletion(org.testng.ITestResult, java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
+        <test-method status="PASS" signature="operationsOnTestCompletion(org.testng.ITestResult)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-28T06:34:29Z" finished-at="2019-02-28T06:34:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickondemand status=SUCCESS method=TC_OrderOwner_Approval.clickondemand()[pri:2, instance:regression.TC_OrderOwner_Approval@10bdf5e5] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[ - PASSED.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- operationsOnTestCompletion -->
-        <test-method status="SKIP" signature="logout()[pri:4, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="logout" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated operationsOnTestCompletion.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="operationsOnTestCompletion(org.testng.ITestResult)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="1" started-at="2019-02-28T06:34:38Z" finished-at="2019-02-28T06:34:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickonpositionid status=SUCCESS method=TC_OrderOwner_Approval.clickonpositionid()[pri:3, instance:regression.TC_OrderOwner_Approval@10bdf5e5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[ - PASSED.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- operationsOnTestCompletion -->
+        <test-method status="PASS" signature="logout()[pri:4, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="logout" duration-ms="5580" started-at="2019-02-28T06:34:38Z" finished-at="2019-02-28T06:34:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="SKIP" signature="operationsOnTestCompletion(org.testng.ITestResult, java.lang.String)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
+        <test-method status="PASS" signature="operationsOnTestCompletion(org.testng.ITestResult)[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="operationsOnTestCompletion" is-config="true" duration-ms="1" started-at="2019-02-28T06:34:44Z" finished-at="2019-02-28T06:34:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logout status=SUCCESS method=TC_OrderOwner_Approval.logout()[pri:4, instance:regression.TC_OrderOwner_Approval@10bdf5e5] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[ - PASSED.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- operationsOnTestCompletion -->
-        <test-method status="SKIP" signature="tearDownFunction()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="tearDownFunction" is-config="true" duration-ms="0" started-at="2019-02-26T10:07:47Z" finished-at="2019-02-26T10:07:47Z">
+        <test-method status="PASS" signature="tearDownFunction()[pri:0, instance:regression.TC_OrderOwner_Approval@10bdf5e5]" name="tearDownFunction" is-config="true" duration-ms="821" started-at="2019-02-28T06:34:44Z" finished-at="2019-02-28T06:34:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownFunction -->

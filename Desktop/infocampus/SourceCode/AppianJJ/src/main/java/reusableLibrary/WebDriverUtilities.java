@@ -25,7 +25,6 @@ public class WebDriverUtilities {
 	
 	public void dropdown(By locator) throws InterruptedException
 	{
-			waitTime();
 			WebElement element = driver.findElement(locator);
 			Actions action = new Actions(driver);
 			action.moveToElement(element).click().build().perform();
@@ -34,7 +33,6 @@ public class WebDriverUtilities {
 			action.sendKeys(Keys.ENTER).build().perform();
 			waitTime();
 			action.sendKeys(Keys.TAB).build().perform();
-			waitTime();
 	}
 	
 	public void click(By locator) throws InterruptedException 
@@ -67,7 +65,7 @@ public class WebDriverUtilities {
 	}
 	public void waitTime() {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
