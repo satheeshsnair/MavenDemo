@@ -53,10 +53,8 @@ public class AddNewPosition extends DriverFactory {
 		utilities = new Utilites(driver, test);
 		sharefunctions = new WebDriverUtilities(driver, test);
 		headers = new Headers(driver, test);
-		int demandid = utilities.demandid(1, 1, 0);
-		String sow = utilities.SOW(1,1,3);
+		int demandid = utilities.demandid("TC_AddNewPosition", "DemandID");
 		providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");
-		provideresource = By.xpath("//a[contains(text(),'" + sow + "')]");
 	}
 	
 	public void Selectsponsor(String wwid) throws InterruptedException 
@@ -79,13 +77,13 @@ public class AddNewPosition extends DriverFactory {
 		{
 			utilities.passsnaps(driver);
 			test.pass("Logged in to application");
-			utilities.WriteExcel(0, 1, 2, "Pass");
+			//utilities.WriteExcel(0, 1, 2, "Pass");
 		}
 		else
 		{
 			utilities.failsnaps(driver);
 			test.fail("Login failed");
-			utilities.WriteExcel(0, 1, 2, "Fail");
+			//utilities.WriteExcel(0, 1, 2, "Fail");
 			Assert.fail("Login failed");
 		}
 	}
@@ -109,7 +107,7 @@ public class AddNewPosition extends DriverFactory {
 	}
 	public void clickondemand() throws Exception 
 	{
-		int demandID = utilities.demandid(1,1,0);
+		int demandID = utilities.demandid("TC_AddNewPosition", "DemandID");
 		String demand = Integer.toString(demandID);		
 		if(sharefunctions.isXpathExists(providedemandtask)) {
 			String task = driver.findElement(providedemandtask).getText();

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\satheeshnair\AppData\Local\Temp\testng-eclipse-899432272\testng-customsuite.xml</span>
+                    <span>C:\Users\satheeshnair\AppData\Local\Temp\testng-eclipse--1110028948\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,11 +118,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="regression.TC_OrderOwner_Approval" hash-for-method="loginasvendor">loginasvendor</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="regression.TC_OrderOwner_Approval" hash-for-method="logout">logout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -171,19 +166,12 @@
                   <span class="method-name">loginasvendor</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logout">
-                  </a> <!-- logout -->
-                  <span class="method-name">logout</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\satheeshnair\AppData\Local\Temp\testng-eclipse-899432272\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\satheeshnair\AppData\Local\Temp\testng-eclipse--1110028948\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -232,32 +220,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'clickonpositionid')
+data.setCell(0, 1, 'loginasvendor')
 data.setCell(0, 2, 'regression.TC_OrderOwner_Approval')
-data.setCell(0, 3, 9081);
+data.setCell(0, 3, 12170);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginasvendor')
+data.setCell(1, 1, 'clickonpositionid')
 data.setCell(1, 2, 'regression.TC_OrderOwner_Approval')
-data.setCell(1, 3, 7388);
+data.setCell(1, 3, 8633);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'clickontask')
 data.setCell(2, 2, 'regression.TC_OrderOwner_Approval')
-data.setCell(2, 3, 6342);
+data.setCell(2, 3, 5778);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'logout')
+data.setCell(3, 1, 'clickondemand')
 data.setCell(3, 2, 'regression.TC_OrderOwner_Approval')
-data.setCell(3, 3, 5580);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'clickondemand')
-data.setCell(4, 2, 'regression.TC_OrderOwner_Approval')
-data.setCell(4, 3, 4316);
+data.setCell(3, 3, 4200);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 30 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -272,9 +256,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">regression.TC_OrderOwner_Approval</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">logout</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -290,51 +281,43 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">createExtentInstance(chrome)</span>
-                <span class="method-start">50 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginasvendor</span>
-                <span class="method-start">11022 ms</span>
+                <span class="method-start">10156 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">operationsOnTestCompletion([TestResult name=loginasvendor status=SUCCESS method=TC_OrderOwner_Approval.loginasvendor()[pri:0, i...)</span>
-                <span class="method-start">18413 ms</span>
+                <span class="method-start">22328 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">clickontask</span>
-                <span class="method-start">18417 ms</span>
+                <span class="method-start">22331 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">operationsOnTestCompletion([TestResult name=clickontask status=SUCCESS method=TC_OrderOwner_Approval.clickontask()[pri:1, insta...)</span>
-                <span class="method-start">24760 ms</span>
+                <span class="method-start">28110 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">clickondemand</span>
-                <span class="method-start">24760 ms</span>
+                <span class="method-start">28111 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">operationsOnTestCompletion([TestResult name=clickondemand status=SUCCESS method=TC_OrderOwner_Approval.clickondemand()[pri:2, i...)</span>
-                <span class="method-start">29077 ms</span>
+                <span class="method-start">32313 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">clickonpositionid</span>
-                <span class="method-start">29077 ms</span>
+                <span class="method-start">32315 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">operationsOnTestCompletion([TestResult name=clickonpositionid status=SUCCESS method=TC_OrderOwner_Approval.clickonpositionid()[...)</span>
-                <span class="method-start">38159 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">logout</span>
-                <span class="method-start">38161 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">operationsOnTestCompletion([TestResult name=logout status=SUCCESS method=TC_OrderOwner_Approval.logout()[pri:4, instance:regres...)</span>
-                <span class="method-start">43745 ms</span>
+                <span class="method-start">40949 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownFunction</span>
-                <span class="method-start">43746 ms</span>
+                <span class="method-start">40950 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

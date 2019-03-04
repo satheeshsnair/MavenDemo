@@ -39,23 +39,22 @@ public class Login extends Utilities {
 		this.driver = driver;
 		this.test = test;
 		sharedfuntions = new WebDriverUtilities(driver, test);
+		utilites = new Utilites(driver, test);
 	}
 	
-	public Login username(int sheetnum, int row, int column) throws Exception
+	public Login username(String Testcase, String Method)
 	{
-		utilites = new Utilites(driver, test);
-		utilites.readexcel(sheetnum,row,column);
-		driver.findElement(username1).sendKeys(utilites.uname);
-		test.pass("Entered username: " + utilites.uname);
+		utilites.GetData_Method(Testcase, Method);
+		driver.findElement(username1).sendKeys(utilites.GetValue);
+		test.pass("Entered username: " + utilites.GetValue);
 		return this;
 	}
 	
-	public  Login password(int sheetnum, int row, int column) throws Exception
+	public  Login password(String Testcase, String Method) throws Exception
 	{
-		utilites = new Utilites(driver, test);
-		utilites.readexcel(sheetnum,row,column);
-		driver.findElement(password).sendKeys(utilites.pwd);
-		test.pass("Entered password: " + utilites.pwd);
+		utilites.GetData_Method(Testcase, Method);
+		driver.findElement(password).sendKeys(utilites.GetValue);
+		test.pass("Entered password: " + utilites.GetValue);
 		return this;
 	}
 	

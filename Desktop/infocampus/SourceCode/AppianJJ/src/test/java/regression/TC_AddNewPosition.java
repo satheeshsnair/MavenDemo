@@ -24,8 +24,8 @@ public class TC_AddNewPosition extends DriverFactory
 		initializeExtentReport("Login");
 		login = new Login(driver,testInstance); //initialize objectl
 		newposition = new AddNewPosition(driver,testInstance);
-		login.username(0,1,0); //sheet num, row , column
-		login.password(0,1,1); //sheet num, row , column
+		login.username("TC_AddNewResource", "Uname");
+		login.password("TC_AddNewResource", "Password");
 		login.login();
 		newposition.checkheadernews();
 	}
@@ -58,8 +58,8 @@ public class TC_AddNewPosition extends DriverFactory
 		newposition.Selectposition();
 		newposition.Selectexperience();
 		newposition.Selectlanguage();
-		utilities.date_excel(1, 1, 1, newposition.datefrom); //Date from: read from excel
-		utilities.date_excel(1, 1, 2, newposition.dateto); //Date to: Read from excel
+		utilities.date_excel(2, 1, 1, newposition.datefrom); //Date from: read from excel
+		utilities.date_excel(2, 1, 2, newposition.dateto); //Date to: Read from excel
 		newposition.Selectsponsor("374774");
 		newposition.Selectfacility();
 		newposition.Selectregion();
@@ -81,7 +81,7 @@ public class TC_AddNewPosition extends DriverFactory
 		initializeExtentReport("Submit Position");
 		newposition.clicksubmitbutton();
 	}
-	@Test(enabled=true,priority = 6)
+	@Test(enabled=false,priority = 6)
 	public void logout() throws InterruptedException
 	{
 		newposition.logout();

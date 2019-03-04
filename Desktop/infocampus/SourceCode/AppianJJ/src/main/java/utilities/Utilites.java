@@ -26,8 +26,8 @@ public class Utilites {
 	
 	public WebDriver driver;
 	public Utilites utilities;
-	public int i,j,rowcount,demand;
-	public String uname, sow;
+	public int i,j,rowcount,demand, GetrowCount, GetIntvalue;
+	public String uname, sow, GetTestCaseName, GetMethodName, GetValue;
 	public String pwd;
 	static XSSFRow row;
 	static XSSFWorkbook wb;
@@ -46,23 +46,60 @@ public class Utilites {
 		this.test = test;
 	}
 	
-	public void readexcel(int sheetnum, int row, int column) throws Exception
-	{
-		try
-		{
-			FileInputStream fis = new FileInputStream(Excel);
-			wb = new XSSFWorkbook(fis);
-			sh1=wb.getSheetAt(sheetnum);
-			rowcount = sh1.getLastRowNum();
-			uname = sh1.getRow(row).getCell(column).getStringCellValue();
-			pwd = sh1.getRow(row).getCell(column).getStringCellValue();
-			//sow = sh1.getRow(row).getCell(column).getStringCellValue();
-		}
-		catch (Exception e) 
-		{
-			e.printStackTrace();
-		}
-	}
+	public String GetData_Method(String TestCaseName,String MethodName)
+    {
+       try {
+        //LogGeneration.GenerateLog("ExpectedTestcasename and ExpectedMethodname: "+TestCaseName +" and "+MethodName);             
+        FileInputStream inputStream = new FileInputStream(Excel);
+        wb = new XSSFWorkbook(inputStream);             
+        sh1=wb.getSheetAt(0);
+        //Find number of rows in excel file
+        GetrowCount = sh1.getLastRowNum()-sh1.getFirstRowNum();   
+        //LogGeneration.GenerateLog("Total no of rows:"+GetrowCount);
+           for(i=1;i < GetrowCount+1;i++)
+           {
+              for (j = 0; j <2; j++) 
+                 {
+                   GetTestCaseName=sh1.getRow(i).getCell(j).getStringCellValue();
+                   //LogGeneration.GenerateLog("TestCaseName:"+GetTestCaseName);
+                   if (TestCaseName.equals(GetTestCaseName))
+                     {
+                	   GetMethodName=sh1.getRow(i).getCell(j=j+1).getStringCellValue();
+                       //LogGeneration.GenerateLog("MethodName:"+GetMethodName);
+                       if(MethodName.equals(GetMethodName))
+                         {
+                          GetValue=sh1.getRow(i).getCell(j=j+1).getStringCellValue();
+                          // LogGeneration.GenerateLog("TestCase Name:"+GetTestCaseName+" MethodName:"+GetMethodName +" and Value:"+GetValue ); 
+                         }
+                       }
+                  }
+           }
+           
+       }
+       catch(Exception e)
+       {
+    	   System.out.println(e); 
+       }
+       return GetValue;
+    }
+	
+//	public void readexcel(int sheetnum, int row, int column) throws Exception
+//	{
+//		try
+//		{
+//			FileInputStream fis = new FileInputStream(Excel);
+//			wb = new XSSFWorkbook(fis);
+//			sh1=wb.getSheetAt(sheetnum);
+//			rowcount = sh1.getLastRowNum();
+//			uname = sh1.getRow(row).getCell(column).getStringCellValue();
+//			pwd = sh1.getRow(row).getCell(column).getStringCellValue();
+//			//sow = sh1.getRow(row).getCell(column).getStringCellValue();
+//		}
+//		catch (Exception e) 
+//		{
+//			e.printStackTrace();
+//		}
+//	}
 	
 	public void WriteExcel(int sheetnum, int row, int column, String value) throws IOException
 	{
@@ -81,22 +118,54 @@ public class Utilites {
 		}
 	}
 	
-	public int demandid(int sheetnum, int row, int column)
+	public int demandid(String TestCaseName,String MethodName)
 	{
 		FileInputStream fis;
 		try {
 			fis = new FileInputStream(Excel);
 			wb = new XSSFWorkbook(fis);
-			sh1=wb.getSheetAt(sheetnum);
+			sh1=wb.getSheetAt(0);
 			rowcount = sh1.getLastRowNum();
-			return demand = (int)sh1.getRow(row).getCell(column).getNumericCellValue();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		test.pass("Deamind ID entered" + demand);
-		return column;
+			GetrowCount = sh1.getLastRowNum()-sh1.getFirstRowNum();   
+	        //LogGeneration.GenerateLog("Total no of rows:"+GetrowCount);
+	           for(i=1;i < GetrowCount+1;i++)
+	           {
+	              for (j = 0; j <2; j++) 
+	                {
+	                  GetTestCaseName=sh1.getRow(i).getCell(j).getStringCellValue();
+	                  //LogGeneration.GenerateLog("TestCaseName:"+GetTestCaseName);
+	                  if (TestCaseName.equals(GetTestCaseName))
+	                    {
+	                	  GetMethodName=sh1.getRow(i).getCell(j=j+1).getStringCellValue();
+	                      //LogGeneration.GenerateLog("MethodName:"+GetMethodName);
+	                     if(MethodName.equals(GetMethodName))
+	                       {
+	                        GetIntvalue=(int) sh1.getRow(i).getCell(j=j+1).getNumericCellValue();
+	                        // LogGeneration.GenerateLog("TestCase Name:"+GetTestCaseName+" MethodName:"+GetMethodName +" and Value:"+GetValue ); 
+	                        }
+	                      }
+	                  }
+	           }
+	    }
+	    catch(Exception e)
+	    {
+	           System.out.println(e); 
+	    }
+		return GetIntvalue;
+//		FileInputStream fis;
+//		try {
+//			fis = new FileInputStream(Excel);
+//			wb = new XSSFWorkbook(fis);
+//			sh1=wb.getSheetAt(sheetnum);
+//			rowcount = sh1.getLastRowNum();
+//			return demand = (int)sh1.getRow(row).getCell(column).getNumericCellValue();
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		test.pass("Deamind ID entered" + demand);
+//		return column;
 	}
 	
 	public void date_excel(int sheetnum, int row, int column, By locator) throws IOException 
@@ -133,21 +202,21 @@ public class Utilites {
 	    return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new java.util.Date());
 	}
 	
-	public String SOW(int sheetnum, int row, int column)
-	{
-		FileInputStream fis;
-		String SOW = null;
-		try {
-			fis = new FileInputStream(Excel);
-			wb = new XSSFWorkbook(fis);
-			sh1=wb.getSheetAt(sheetnum);
-			SOW = sh1.getRow(row).getCell(column).getStringCellValue();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		//test.pass("SOW entered" + SOW);
-		return SOW;
-	}
+//	public String SOW(int sheetnum, int row, int column)
+//	{
+//		FileInputStream fis;
+//		String SOW = null;
+//		try {
+//			fis = new FileInputStream(Excel);
+//			wb = new XSSFWorkbook(fis);
+//			sh1=wb.getSheetAt(sheetnum);
+//			SOW = sh1.getRow(row).getCell(column).getStringCellValue();
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		//test.pass("SOW entered" + SOW);
+//		return SOW;
+//	}
 }

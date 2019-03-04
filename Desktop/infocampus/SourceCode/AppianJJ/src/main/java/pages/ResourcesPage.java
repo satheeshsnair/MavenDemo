@@ -59,7 +59,7 @@ public class ResourcesPage {
 		headers = new Headers(driver, test);
 		utilities = new Utilites(driver,test);
 		sharefunctions = new WebDriverUtilities(driver,test);
-		String sow = utilities.SOW(1,1,3);
+		String sow = utilities.GetData_Method("TC_AddNewResource", "SOW");
 		provideresource = By.xpath("//a[contains(text(),'" + sow + "')]");
 	}
 	
@@ -101,15 +101,19 @@ public class ResourcesPage {
 	}
 	public void clickonresource() throws Exception 
 	{
-		String sow = utilities.SOW(1,1,3);
+		String sow = utilities.GetData_Method("TC_AddNewResource", "SOW");
+		System.out.println(sow+" "+"sow");
+		String sownmbr = utilities.GetValue;
+		System.out.println(sownmbr + " " + "Sownmbr");
 		//String sow = utilities.readexcel(sheetnum, row, column);
 		if(sharefunctions.isXpathExists(provideresource)) {
 			String task = driver.findElement(provideresource).getText();
-			if(task.contains(sow))
+			System.out.println(task + " " + "task");
+			if(task.contains(sownmbr))
 			{
 				sharefunctions.click(provideresource);
 				sharefunctions.waitTime();
-				test.pass("Clicked on Resource" + sow);
+				test.pass("Clicked on Resource" + sownmbr);
 				String expected = driver.getTitle();
 				sharefunctions.waitTime();
 				if(expected.contains("Provide Resource"))
@@ -403,7 +407,7 @@ public class ResourcesPage {
 	{
 		try 
 		{
-			sharefunctions.sendkey(empID, "0000080");
+			sharefunctions.sendkey(empID, "0000081");
 			utilities.passsnaps(driver);
 			test.pass("empID selected");
 		}catch (Exception e) {

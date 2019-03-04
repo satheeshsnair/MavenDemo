@@ -27,8 +27,8 @@ public class TC_OrderOwner_Approval extends DriverFactory
 		initializeExtentReport("Login");
 		login = new Login(driver,testInstance); //initialize objectl
 		orderowner = new OrderOwner(driver, testInstance);
-		login.username(0,2,0) //sheet num, row , column
-		.password(0,2,1) //sheet num, row , column
+		login.username("TC_OrderOwner_Approval", "Uname")
+		.password("TC_OrderOwner_Approval", "Password")
 		.login();
 		
 	}
@@ -51,7 +51,7 @@ public class TC_OrderOwner_Approval extends DriverFactory
 		initializeExtentReport("Click on Position ID and Approve");
 		orderowner.clickpositionid();
 	}
-	@Test(enabled=true,priority = 4)
+	@Test(enabled=false,priority = 4)
 	public void logout() throws Exception
 	{
 		orderowner.logout();

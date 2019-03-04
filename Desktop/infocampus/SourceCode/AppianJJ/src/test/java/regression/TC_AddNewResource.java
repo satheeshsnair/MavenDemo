@@ -27,8 +27,8 @@ public class TC_AddNewResource extends DriverFactory
 		initializeExtentReport("Login");
 		login = new Login(driver,testInstance); //initialize objectl
 		resource = new ResourcesPage(driver, testInstance);
-		login.username(0,1,0); //sheet num, row , column
-		login.password(0,1,1); //sheet num, row , column
+		login.username("TC_AddNewResource", "Uname");
+		login.password("TC_AddNewResource", "Password");
 		login.login();
 		
 	}
@@ -91,7 +91,7 @@ public class TC_AddNewResource extends DriverFactory
 		resource.submit();
 		resource.alertyes();
 	}
-	@Test(enabled=true,priority = 6)
+	@Test(enabled=false,priority = 6)
 	public void logout() throws InterruptedException
 	{
 		sharefunctions.click(headers.logo);

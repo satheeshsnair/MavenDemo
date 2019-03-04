@@ -41,10 +41,10 @@ public class Headers
 		this.driver=driver;
 		utilities = new Utilites(driver, test);
 		//this.test = test;
-		int demandid = utilities.demandid(1, 1, 0);
-		String sow = utilities.SOW(1,1,3);
-		providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");
-		provideresource = By.xpath("//a[contains(text(),'" + sow + "')]");
+//		int demandid = utilities.demandid(1, 1, 0);
+//		String sow = utilities.SOW(1,1,3);
+//		providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");
+//		provideresource = By.xpath("//a[contains(text(),'" + sow + "')]");
 	}
 	public void clickontask() throws Exception
 	{
