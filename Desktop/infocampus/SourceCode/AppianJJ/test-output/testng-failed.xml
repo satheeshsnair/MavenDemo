@@ -7,9 +7,12 @@
         <methods>
           <include name="addnewresource"/>
           <include name="tearDownFunction"/>
+          <include name="clickonresource"/>
           <include name="createExtentInstance"/>
           <include name="operationsOnTestCompletion"/>
           <include name="CreateErrorRepFolder"/>
+          <include name="enterresourcedetails"/>
+          <include name="submitresource"/>
         </methods>
       </class> <!-- regression.TC_AddNewResource -->
     </classes>

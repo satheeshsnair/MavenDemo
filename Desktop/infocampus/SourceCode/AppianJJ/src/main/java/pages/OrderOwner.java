@@ -35,7 +35,7 @@ public class OrderOwner {
 		headers = new Headers(driver, test);
 		utilities = new Utilites(driver,test);
 		sharefunctions = new WebDriverUtilities(driver,test);
-		int demandid = utilities.demandid("TC_OrderOwner_Approval", "DemandID");
+		int demandid = utilities.GetInt_method("TC_OrderOwner_Approval", "DemandID");
 		providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");
 	}
 	public void clickontask() throws Exception
@@ -57,7 +57,7 @@ public class OrderOwner {
 	}
 	public void clickondemand() throws Exception
 	{
-		int demandID = utilities.demandid("TC_OrderOwner_Approval", "DemandID");
+		int demandID = utilities.GetInt_method("TC_OrderOwner_Approval", "DemandID");
 		String demand = Integer.toString(demandID);		
 		if(sharefunctions.isXpathExists(providedemandtask)) {
 			String task = driver.findElement(providedemandtask).getText();
