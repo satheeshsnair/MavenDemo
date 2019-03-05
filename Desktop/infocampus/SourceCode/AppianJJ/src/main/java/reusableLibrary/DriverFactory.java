@@ -157,8 +157,9 @@ public class DriverFactory extends ExtentManager {
 
 
 	@AfterClass
-	public void tearDownFunction() {
+	public void tearDownFunction() throws Exception {
 		if (driver != null) {
+			Thread.sleep(2000);
 			driver.close();
 		}
 		Runtime rt = Runtime.getRuntime();

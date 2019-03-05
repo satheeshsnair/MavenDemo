@@ -53,7 +53,7 @@ public class AddNewPosition extends DriverFactory {
 		utilities = new Utilites(driver, test);
 		sharefunctions = new WebDriverUtilities(driver, test);
 		headers = new Headers(driver, test);
-		int demandid = utilities.demandid("TC_AddNewPosition", "DemandID");
+		int demandid = utilities.GetInt_method("TC_AddNewPosition", "DemandID");
 		providedemandtask = By.xpath("//a[contains(text(),'" + demandid + "')]");
 	}
 	
@@ -107,7 +107,7 @@ public class AddNewPosition extends DriverFactory {
 	}
 	public void clickondemand() throws Exception 
 	{
-		int demandID = utilities.demandid("TC_AddNewPosition", "DemandID");
+		int demandID = utilities.GetInt_method("TC_AddNewPosition", "DemandID");
 		String demand = Integer.toString(demandID);		
 		if(sharefunctions.isXpathExists(providedemandtask)) {
 			String task = driver.findElement(providedemandtask).getText();
@@ -183,7 +183,14 @@ public class AddNewPosition extends DriverFactory {
 			test.fail("Not able to select language");
 			Assert.fail("Not able to select Language");
 		}
-		
+	}
+	public void date_from(String Testcase, String Method, By locator)
+	{
+		utilities.date(Testcase, Method, locator);
+	}
+	public void date_to(String Testcase, String Method, By locator)
+	{
+		utilities.date(Testcase, Method, locator);
 	}
 	public void Selectfacility() throws Exception
 	{

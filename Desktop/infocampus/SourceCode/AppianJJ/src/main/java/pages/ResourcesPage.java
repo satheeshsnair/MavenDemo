@@ -102,18 +102,14 @@ public class ResourcesPage {
 	public void clickonresource() throws Exception 
 	{
 		String sow = utilities.GetData_Method("TC_AddNewResource", "SOW");
-		System.out.println(sow+" "+"sow");
-		String sownmbr = utilities.GetValue;
-		System.out.println(sownmbr + " " + "Sownmbr");
 		//String sow = utilities.readexcel(sheetnum, row, column);
 		if(sharefunctions.isXpathExists(provideresource)) {
 			String task = driver.findElement(provideresource).getText();
-			System.out.println(task + " " + "task");
-			if(task.contains(sownmbr))
+			if(task.contains(sow))
 			{
 				sharefunctions.click(provideresource);
 				sharefunctions.waitTime();
-				test.pass("Clicked on Resource" + sownmbr);
+				test.pass("Clicked on Resource" + sow);
 				String expected = driver.getTitle();
 				sharefunctions.waitTime();
 				if(expected.contains("Provide Resource"))
@@ -403,11 +399,13 @@ public class ResourcesPage {
 			Assert.fail("Not able to select skill");
 		}
 	}
-	public void empID() throws Exception
+	public void empID(String TestCaseName, String MethodName) throws Exception
 	{
 		try 
 		{
-			sharefunctions.sendkey(empID, "0000081");
+			int emp = utilities.GetInt_method(TestCaseName, MethodName);
+			String empid = Integer.toString(emp);	
+			driver.findElement(empID).sendKeys(empid);
 			utilities.passsnaps(driver);
 			test.pass("empID selected");
 		}catch (Exception e) {

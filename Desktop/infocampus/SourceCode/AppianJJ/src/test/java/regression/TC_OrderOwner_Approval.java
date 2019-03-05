@@ -51,7 +51,7 @@ public class TC_OrderOwner_Approval extends DriverFactory
 		initializeExtentReport("Click on Position ID and Approve");
 		orderowner.clickpositionid();
 	}
-	@Test(enabled=false,priority = 4)
+	@Test(enabled=true,priority = 4)
 	public void logout() throws Exception
 	{
 		orderowner.logout();

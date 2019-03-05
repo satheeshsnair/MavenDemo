@@ -58,8 +58,8 @@ public class TC_AddNewPosition extends DriverFactory
 		newposition.Selectposition();
 		newposition.Selectexperience();
 		newposition.Selectlanguage();
-		utilities.date_excel(2, 1, 1, newposition.datefrom); //Date from: read from excel
-		utilities.date_excel(2, 1, 2, newposition.dateto); //Date to: Read from excel
+		newposition.date_from("TC_AddNewPosition", "date_from", newposition.datefrom);
+		newposition.date_from("TC_AddNewPosition", "date_to", newposition.dateto);
 		newposition.Selectsponsor("374774");
 		newposition.Selectfacility();
 		newposition.Selectregion();
@@ -81,7 +81,7 @@ public class TC_AddNewPosition extends DriverFactory
 		initializeExtentReport("Submit Position");
 		newposition.clicksubmitbutton();
 	}
-	@Test(enabled=false,priority = 6)
+	@Test(enabled=true,priority = 6)
 	public void logout() throws InterruptedException
 	{
 		newposition.logout();

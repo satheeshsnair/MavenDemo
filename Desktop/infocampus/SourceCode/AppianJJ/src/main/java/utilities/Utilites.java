@@ -2,7 +2,6 @@ package utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -118,7 +117,7 @@ public class Utilites {
 		}
 	}
 	
-	public int demandid(String TestCaseName,String MethodName)
+	public int GetInt_method(String TestCaseName,String MethodName)
 	{
 		FileInputStream fis;
 		try {
@@ -168,20 +167,20 @@ public class Utilites {
 //		return column;
 	}
 	
-	public void date_excel(int sheetnum, int row, int column, By locator) throws IOException 
-	{
-		FileInputStream fis = new FileInputStream(Excel);
-		wb = new XSSFWorkbook(fis);
-		sh1=wb.getSheetAt(sheetnum);
-		Date cellDate = sh1.getRow(row).getCell(column).getDateCellValue();
-		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-		Calendar c = Calendar.getInstance();
-		c.setTime(cellDate); // Now use today date.
-		//c.add(Calendar.DATE); // Adding 7 days
-		String output = sdf.format(c.getTime());
-		driver.findElement(locator).sendKeys(output);
-		test.pass("Entered Date" + output);
-	}
+//	public void date_excel(int sheetnum, int row, int column, By locator) throws IOException 
+//	{
+//		FileInputStream fis = new FileInputStream(Excel);
+//		wb = new XSSFWorkbook(fis);
+//		sh1=wb.getSheetAt(sheetnum);
+//		Date cellDate = sh1.getRow(row).getCell(column).getDateCellValue();
+//		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+//		Calendar c = Calendar.getInstance();
+//		c.setTime(cellDate); // Now use today date.
+//		//c.add(Calendar.DATE); // Adding 7 days
+//		String output = sdf.format(c.getTime());
+//		driver.findElement(locator).sendKeys(output);
+//		test.pass("Entered Date" + output);
+//	}
 	
 	public void passsnaps(WebDriver driver) throws Exception
 	{
@@ -201,7 +200,49 @@ public class Utilites {
 	{
 	    return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new java.util.Date());
 	}
-	
+	public Date date(String TestCaseName,String MethodName, By locator )
+	{
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(Excel);
+			wb = new XSSFWorkbook(fis);
+			sh1=wb.getSheetAt(0);
+			rowcount = sh1.getLastRowNum();
+			GetrowCount = sh1.getLastRowNum()-sh1.getFirstRowNum();   
+	        //LogGeneration.GenerateLog("Total no of rows:"+GetrowCount);
+	           for(i=1;i < GetrowCount+1;i++)
+	           {
+	              for (j = 0; j <2; j++) 
+	                {
+	                  GetTestCaseName=sh1.getRow(i).getCell(j).getStringCellValue();
+	                  //LogGeneration.GenerateLog("TestCaseName:"+GetTestCaseName);
+	                  if (TestCaseName.equals(GetTestCaseName))
+	                    {
+	                	  GetMethodName=sh1.getRow(i).getCell(j=j+1).getStringCellValue();
+	                      //LogGeneration.GenerateLog("MethodName:"+GetMethodName);
+	                     if(MethodName.equals(GetMethodName))
+	                       {
+	                    	 Date cellDate =sh1.getRow(i).getCell(j=j+1).getDateCellValue();
+	                    	 SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+	                 		Calendar c = Calendar.getInstance();
+	                 		c.setTime(cellDate); // Now use today date.
+	                 		//c.add(Calendar.DATE); // Adding 7 days
+	                 		String output = sdf.format(c.getTime());
+	                 		driver.findElement(locator).sendKeys(output);
+	                 		test.pass("Entered Date" + output);
+	                        // LogGeneration.GenerateLog("TestCase Name:"+GetTestCaseName+" MethodName:"+GetMethodName +" and Value:"+GetValue ); 
+	                        }
+	                      }
+	                  }
+	           }
+	    }
+	    catch(Exception e)
+	    {
+	           System.out.println(e); 
+	    }
+		return null;
+		
+	}
 //	public String SOW(int sheetnum, int row, int column)
 //	{
 //		FileInputStream fis;

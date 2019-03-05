@@ -79,7 +79,7 @@ public class TC_AddNewResource extends DriverFactory
 		resource.experience();
 		resource.isprimary();
 		resource.upload("C:\\Users\\satheeshnair\\Desktop\\Dummy1.docx");
-		resource.empID();
+		resource.empID("TC_AddNewResource", "empid");
 		resource.addlang();
 		resource.lang();
 		resource.isprimarylang();
@@ -91,7 +91,7 @@ public class TC_AddNewResource extends DriverFactory
 		resource.submit();
 		resource.alertyes();
 	}
-	@Test(enabled=false,priority = 6)
+	@Test(enabled=true,priority = 6)
 	public void logout() throws InterruptedException
 	{
 		sharefunctions.click(headers.logo);
