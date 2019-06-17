@@ -24,7 +24,7 @@ public class TC_OrderOwner_Approval extends DriverFactory
 	@Test(enabled=true,priority=0)
 	public void loginasvendor() throws Exception
 	{
-		initializeExtentReport("Login");
+		initializeUserStoryInReport("Login");
 		login = new Login(driver,testInstance); //initialize objectl
 		orderowner = new OrderOwner(driver, testInstance);
 		login.username("TC_OrderOwner_Approval", "Uname")
@@ -35,20 +35,20 @@ public class TC_OrderOwner_Approval extends DriverFactory
 	@Test(enabled=true,priority=1)
 	public void clickontask() throws Exception
 	{
-		initializeExtentReport("Click on Task");
+		initializeUserStoryInReport("Click on Task");
 		orderowner.clickontask();
 		
 	}
 	@Test(enabled=true,priority = 2)
 	public void clickondemand() throws Exception
 	{
-		initializeExtentReport("Select Demand task");
+		initializeUserStoryInReport("Select Demand task");
 		orderowner.clickondemand();
 	}
 	@Test(enabled=true,priority = 3)
 	public void clickonpositionid() throws Exception
 	{
-		initializeExtentReport("Click on Position ID and Approve");
+		initializeUserStoryInReport("Click on Position ID and Approve");
 		orderowner.clickpositionid();
 	}
 	@Test(enabled=true,priority = 4)

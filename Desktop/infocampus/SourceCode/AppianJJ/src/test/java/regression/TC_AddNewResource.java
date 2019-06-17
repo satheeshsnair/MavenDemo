@@ -24,7 +24,7 @@ public class TC_AddNewResource extends DriverFactory
 	@Test(enabled=true,priority=0)
 	public void loginasvendor() throws Exception
 	{
-		initializeExtentReport("Login");
+		initializeUserStoryInReport("Login");
 		login = new Login(driver,testInstance); //initialize objectl
 		resource = new ResourcesPage(driver, testInstance);
 		login.username("TC_AddNewResource", "Uname");
@@ -35,7 +35,7 @@ public class TC_AddNewResource extends DriverFactory
 	@Test(enabled=true,priority=1)
 	public void clickontask() throws Exception
 	{
-		initializeExtentReport("Click on task");
+		initializeUserStoryInReport("Click on task");
 		headers = new Headers(driver, testInstance);
 		utilities = new Utilites(driver,testInstance);
 		sharefunctions = new WebDriverUtilities(driver,testInstance);
@@ -45,19 +45,19 @@ public class TC_AddNewResource extends DriverFactory
 	@Test(enabled=true,priority = 2)
 	public void clickonresource() throws Exception
 	{
-		initializeExtentReport("Select Resource task");
+		initializeUserStoryInReport("Select Resource task");
 		resource.clickonresource();
 	}
 	@Test(enabled=true,priority = 3)
 	public void addnewresource() throws Exception
 	{
-		initializeExtentReport("Click on Add Resource");
+		initializeUserStoryInReport("Click on Add Resource");
 		resource.clickaddresourcebtn();
 	}
 	@Test(enabled =true, priority=4)
 	public void enterresourcedetails() throws Exception
 	{
-		initializeExtentReport("Enter resource details and save");
+		initializeUserStoryInReport("Enter resource details and save");
 		resource.firstname();
 		resource.lastname();
 		resource.email();

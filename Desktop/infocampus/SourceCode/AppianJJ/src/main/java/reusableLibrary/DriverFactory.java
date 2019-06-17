@@ -1,5 +1,7 @@
 package reusableLibrary;
 
+import static io.github.bonigarcia.wdm.DriverManagerType.CHROME; 
+
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -26,6 +28,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ExtentManager;
 
 public class DriverFactory extends ExtentManager {
@@ -43,7 +46,7 @@ public class DriverFactory extends ExtentManager {
 	/**
 	 * Function to change the Error Screenshot folder name before the Suite starts
 	 * 
-	 * @author saikiran.nataraja
+	 * 
 	 */
 	public void CreateErrorRepFolder() throws Exception {
 		PathConstants.setDateFormatSettings(); // set the date format before starting each test
@@ -65,7 +68,10 @@ public class DriverFactory extends ExtentManager {
 		Thread.sleep(PathConstants.minWaitTime);
 		String baseURL = "https://jnjtest.appiancloud.com/suite/portal/login.jsp";
 		runOnBrowser = browser;
-		driver = new ChromeDriver(createChromeCapabilites());
+		WebDriverManager.getInstance(CHROME).forceCache().setup();
+		// Set the capabilities and launch the driver
+		driver = new ChromeDriver(createChromeCapabilites()); 
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -103,7 +109,7 @@ public class DriverFactory extends ExtentManager {
 		chromeOptions.addArguments("--start-maximized");
 		chromeOptions.addArguments("disable-infobars");
 		// Optional, if not specified, WebDriver will search your path for chromedriver.
-		System.setProperty("webdriver.chrome.driver", PathConstants.chromeDriverPath);
+//		System.setProperty("webdriver.chrome.driver", PathConstants.chromeDriverPath);
 		System.setProperty("webdriver.chrome.args", "--disable-logging");
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		return chromeOptions;
@@ -147,7 +153,7 @@ public class DriverFactory extends ExtentManager {
 	 * 
 	 * @author saikiran.nataraja
 	 */
-	public void initializeExtentReport(String stepName) {
+	public void initializeUserStoryInReport(String stepName) {
 		// Instantiating the ExtentReports
 		// Create testInstance
 		testInstance = parentTestInstance.createNode(stepName,
@@ -155,7 +161,8 @@ public class DriverFactory extends ExtentManager {
 		
 	}
 
-
+	
+	
 	@AfterClass
 	public void tearDownFunction() throws Exception {
 		if (driver != null) {
@@ -182,7 +189,8 @@ public class DriverFactory extends ExtentManager {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
 			Reporter.log(" - FAILED.", true);
 			// Extent Reports error message
-			testInstance.log(Status.FAIL, "Failure Stack Trace: " + testResult.getThrowable().getMessage());
+			testInstance.log(Status.FAIL, "Fail");
+//			testInstance.log(Status.FAIL, "Failure Stack Trace: " + testResult.getThrowable().getMessage());
 			// adding screenshots to log
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			Reporter.log(" - SKIPPED.", false);

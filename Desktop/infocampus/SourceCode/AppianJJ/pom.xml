@@ -15,7 +15,7 @@
 		<junit.version>4.12</junit.version>
 		<poi.version>4.0.1</poi.version>
 		<faker.version>0.16</faker.version>
-		<webdrivermanager.version>3.1.1</webdrivermanager.version>
+		<webdrivermanager.version>3.4.0</webdrivermanager.version> 
 		<poi.commons-collections.version>4.2</poi.commons-collections.version>
 		<poi.commons-codec.version>1.11</poi.commons-codec.version>
 		<log4j.version>2.11.1</log4j.version>

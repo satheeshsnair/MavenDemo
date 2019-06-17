@@ -33,10 +33,11 @@ public class ExtentManager {
             return extent; //avoid creating new instance of HTML file if it is not null
 		htmlReporter=getHtmlReporter();
         extent = new ExtentReports();		
-        extent.setSystemInfo("Operating System", "Windows 10");
+        extent.setSystemInfo("Operating System", System.getProperty("os.name"));
+        extent.setSystemInfo("Java Version", System.getProperty("java.version"));
         extent.setSystemInfo("Selenium Version", "3.14.159");
         // class view:
-        extent.setAnalysisStrategy(AnalysisStrategy.CLASS);
+        extent.setAnalysisStrategy(AnalysisStrategy.TEST);
 		extent.attachReporter(htmlReporter);
 		return extent;
 	}

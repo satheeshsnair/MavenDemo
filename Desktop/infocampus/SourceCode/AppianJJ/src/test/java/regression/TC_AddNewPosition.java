@@ -18,43 +18,52 @@ public class TC_AddNewPosition extends DriverFactory
 	AddNewPosition newposition;
 	WebDriverUtilities sharefunctions;
 	
+	public void initializeClasses() {
+		login = new Login(driver,testInstance); //initialize objectl
+		newposition = new AddNewPosition(driver,testInstance);
+		newposition = new AddNewPosition(driver,testInstance);
+		headers = new Headers(driver,testInstance);
+		utilities = new Utilites(driver,testInstance);
+		sharefunctions = new WebDriverUtilities(driver,testInstance);
+	}
+	
 	@Test(enabled=true,priority=0)
 	public void testcase() throws Exception
 	{
-		initializeExtentReport("Login");
-		login = new Login(driver,testInstance); //initialize objectl
-		newposition = new AddNewPosition(driver,testInstance);
+		initializeUserStoryInReport("Login");
+		initializeClasses();
 		login.username("TC_AddNewResource", "Uname");
 		login.password("TC_AddNewResource", "Password");
 		login.login();
 		newposition.checkheadernews();
+		
 	}
 	@Test(enabled=true,priority=1)
 	public void header() throws Exception
 	{
-		initializeExtentReport("Click Task tab");
-		headers = new Headers(driver,testInstance);
-		utilities = new Utilites(driver,testInstance);
-		sharefunctions = new WebDriverUtilities(driver,testInstance);
-		
+		initializeUserStoryInReport("Click Task tab");
+		initializeClasses();
 		newposition.clickheadertask(headers.Tasktab);
 	}
 	@Test(enabled=true,priority = 2)
 	public void clickondemand() throws Exception
 	{
-		initializeExtentReport("Click on Demand");
+		initializeUserStoryInReport("Click on Demand");
+		initializeClasses();
 		newposition.clickondemand();
 	}
 	@Test(enabled=true,priority = 3)
 	public void addnewposition() throws Exception
 	{
-		initializeExtentReport("Click Add position button");
+		initializeUserStoryInReport("Click Add position button");
+		initializeClasses();
 		newposition.clickaddpositionbtn();
 	}
 	@Test(enabled=true,priority = 4)
 	public void addposition() throws Exception
 	{
-		initializeExtentReport("Enter Position Details");
+		initializeUserStoryInReport("Enter Position Details");
+		initializeClasses();
 		newposition.Selectposition();
 		newposition.Selectexperience();
 		newposition.Selectlanguage();
@@ -78,7 +87,8 @@ public class TC_AddNewPosition extends DriverFactory
 	@Test(enabled=true,priority = 5)
 	public void submitposition() throws Exception
 	{
-		initializeExtentReport("Submit Position");
+		initializeUserStoryInReport("Submit Position");
+		initializeClasses();
 		newposition.clicksubmitbutton();
 	}
 	@Test(enabled=true,priority = 6)

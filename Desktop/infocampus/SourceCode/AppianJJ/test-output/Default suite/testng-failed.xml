@@ -3,18 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="regression.TC_AddNewResource">
+      <class name="regression.TC_AddNewPosition">
         <methods>
-          <include name="addnewresource"/>
           <include name="tearDownFunction"/>
-          <include name="clickonresource"/>
           <include name="createExtentInstance"/>
+          <include name="addnewposition"/>
           <include name="operationsOnTestCompletion"/>
           <include name="CreateErrorRepFolder"/>
-          <include name="enterresourcedetails"/>
-          <include name="submitresource"/>
+          <include name="submitposition"/>
         </methods>
-      </class> <!-- regression.TC_AddNewResource -->
+      </class> <!-- regression.TC_AddNewPosition -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
