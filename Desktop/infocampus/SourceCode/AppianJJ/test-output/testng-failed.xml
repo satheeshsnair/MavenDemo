@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [AppianTestSuite]">
+  <test thread-count="5" name="TC_AddNewPosition(failed)" parallel="instances">
     <classes>
       <class name="regression.TC_AddNewPosition">
         <methods>
           <include name="tearDownFunction"/>
           <include name="createExtentInstance"/>
+          <include name="logout"/>
           <include name="addnewposition"/>
           <include name="operationsOnTestCompletion"/>
+          <include name="clickondemand"/>
+          <include name="addposition"/>
           <include name="CreateErrorRepFolder"/>
+          <include name="testcase"/>
+          <include name="header"/>
           <include name="submitposition"/>
         </methods>
       </class> <!-- regression.TC_AddNewPosition -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TC_AddNewPosition(failed) -->
+</suite> <!-- Failed suite [AppianTestSuite] -->

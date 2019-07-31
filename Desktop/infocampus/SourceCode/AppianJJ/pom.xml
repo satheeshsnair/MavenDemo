@@ -22,7 +22,7 @@
 		<slf4japi.version>1.7.25</slf4japi.version>
 		<commons-io.version>2.6</commons-io.version>
 		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-		<suitexml.location>testng.xml</suitexml.location>
+		<suitexml.location>appianRegPack.xml</suitexml.location>
 	</properties>
 
 	<dependencies>
