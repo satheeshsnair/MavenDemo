@@ -20,7 +20,7 @@
 		<poi.commons-codec.version>1.11</poi.commons-codec.version>
 		<log4j.version>2.11.1</log4j.version>
 		<slf4japi.version>1.7.25</slf4japi.version>
-		<commons-io.version>2.6</commons-io.version>
+		<commons-io.version>2.7</commons-io.version>
 		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
 		<suitexml.location>appianRegPack.xml</suitexml.location>
 	</properties>
